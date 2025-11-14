@@ -1,0 +1,15 @@
+{
+  "about": ["manifesto", "concepts", "framework"],
+  "manifesto": ["about", "concepts", "topologies"],
+  "concepts": ["about", "manifesto", "topologies"],
+  "framework": ["leveling", "progression", "guidelines"],
+  "leveling": ["framework", "progression", "topologies"],
+  "progression": ["framework", "leveling", "guidelines"],
+  "guidelines": ["framework", "progression", "management"],
+  "topologies": ["concepts", "shapes", "leveling"],
+  "shapes": ["topologies", "progression", "management"],
+  "management": ["shapes", "developing-leaders", "framework"],
+  "developing-leaders": ["management", "guidelines", "progression"],
+  "references": ["about", "concepts", "framework"],
+  "contributing": ["about", "references"]
+}

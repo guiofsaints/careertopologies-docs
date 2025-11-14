@@ -1,8 +1,12 @@
 import type { NextConfig } from 'next';
+import { withContentlayer } from 'next-contentlayer';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  // Future: Contentlayer integration will be added here
+  // Contentlayer integration
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  // Turbopack configuration to silence warning
+  turbopack: {},
 };
 
-export default nextConfig;
+export default withContentlayer(nextConfig);
