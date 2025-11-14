@@ -1,6 +1,16 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+
+export const metadata: Metadata = {
+  title: 'Home',
+  description: 'A transparent, equitable framework for career development in technology organizations. Explore our comprehensive career topologies, progression frameworks, and organizational patterns.',
+  openGraph: {
+    title: 'Career Topologies - Transparent Career Development Framework',
+    description: 'A transparent, equitable framework for career development in technology organizations. Explore our comprehensive career topologies, progression frameworks, and organizational patterns.',
+  },
+};
 
 export default function HomePage() {
   return (
