@@ -100,61 +100,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Get Started Section */}
-      <div className="container mx-auto px-4 pt-16 pb-4 md:pt-36 md:pb-12">
-        <div className="flex flex-col gap-8">
-          <div className="flex flex-col gap-5">
-            <div className="max-w-2xl mx-auto text-center text-4xl md:text-[44px] font-serif leading-[1.5]">
-              Get started with Career Topologies
-            </div>
-            <div className="text-center max-w-md mx-auto">
-              Explore the framework, understand the concepts, and start building better career paths.
-            </div>
-          </div>
-
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12 flex-wrap">
-            <Link
-              href="/manifesto"
-              className="flex flex-col items-center w-[150px] h-[150px] bg-background rounded-xl border border-white p-6 gap-4 justify-between hover:bg-white transition-colors duration-300"
-            >
-              <div className="font-mono font-normal uppercase leading-none text-[#7A7A7A]">
-                Manifesto
-              </div>
-              <div className="text-4xl">📜</div>
-              <div className="text-[#7A7A7A] text-center leading-[14px] text-[11px]">
-                Our core principles
-              </div>
-            </Link>
-
-            <Link
-              href="/framework"
-              className="flex flex-col items-center w-[150px] h-[150px] bg-background rounded-xl border border-white p-6 gap-4 justify-between hover:bg-white transition-colors duration-300"
-            >
-              <div className="font-mono font-normal uppercase leading-none text-[#7A7A7A]">
-                Framework
-              </div>
-              <div className="text-4xl">⚙️</div>
-              <div className="text-[#7A7A7A] text-center leading-[14px] text-[11px]">
-                Implementation guide
-              </div>
-            </Link>
-
-            <Link
-              href="/contributing"
-              className="flex flex-col items-center w-[150px] h-[150px] bg-background rounded-xl border border-white p-6 gap-4 justify-between hover:bg-white transition-colors duration-300"
-            >
-              <div className="font-mono font-normal uppercase leading-none text-[#7A7A7A]">
-                Contribute
-              </div>
-              <div className="text-4xl">🤝</div>
-              <div className="text-[#7A7A7A] text-center leading-[14px] text-[11px]">
-                Join the community
-              </div>
-            </Link>
-          </div>
-        </div>
-      </div>
-
       {/* Principles Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -201,6 +146,31 @@ export default function HomePage() {
             <div className="text-center pt-8">
               <Button asChild size="lg" variant="outline">
                 <Link href="/manifesto">Read Our Manifesto →</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-3xl md:text-4xl font-serif font-normal">
+                Ready to get started?
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Explore our comprehensive framework and start building transparent career paths
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg">
+                <Link href="/framework">View Framework</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline">
+                <Link href="/contributing">Contribute</Link>
               </Button>
             </div>
           </div>
