@@ -6,6 +6,7 @@ import { Breadcrumbs } from '@/components/layout/breadcrumbs';
 import { PageHero } from '@/components/content/page-hero';
 import { getManagementPageBySlug, getAllManagementPages } from '@/lib/content';
 import { useMDXComponent } from 'next-contentlayer/hooks';
+import { mdxComponents } from '@/components/mdx';
 
 export default function ManagementPage({
   params,
@@ -28,7 +29,7 @@ export default function ManagementPage({
       <PageHero title={page.title} description={page.description} />
       <div className="container mx-auto px-4 py-8 md:py-12">
         <article className="prose max-w-4xl mx-auto">
-          <MDXContent />
+          <MDXContent components={mdxComponents} />
         </article>
       </div>
     </>
