@@ -1,11 +1,9 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/providers/theme-provider';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-
-const inter = Inter({ subsets: ['latin'] });
+import { aeonik, stkBureauSerif, ubuntuMono } from './fonts';
 
 export const metadata: Metadata = {
   title: 'Career Topologies',
@@ -19,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} min-h-screen flex flex-col`}>
+      <body 
+        className={`${aeonik.variable} ${stkBureauSerif.variable} ${ubuntuMono.variable} min-h-screen flex flex-col font-sans antialiased`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

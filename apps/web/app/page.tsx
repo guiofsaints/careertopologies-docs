@@ -1,84 +1,211 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Card, CardContent } from '@/components/ui/card';
 
 export default function HomePage() {
   return (
-    <div className="container mx-auto px-4 py-12 md:py-24">
-      <div className="max-w-6xl mx-auto">
-        {/* Hero Section */}
-        <div className="text-center space-y-6 mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            Career Topologies
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A transparent, equitable framework for career development in technology organizations
-          </p>
-          
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button asChild size="lg">
-              <Link href="/about">Get Started</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/framework">View Framework</Link>
-            </Button>
+    <div className="flex flex-col">
+      {/* Hero Section */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center space-y-8">
+            <div className="space-y-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal tracking-tight">
+                Career Topologies
+              </h1>
+              <p className="text-xl text-muted-foreground">
+                A transparent, equitable framework for career development in technology organizations
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg">
+                <Link href="/framework">Explore Framework</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link href="/about">Learn More</Link>
+              </Button>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Info Alert */}
-        <Alert className="mb-12">
-          <AlertDescription>
-            Phase 2 Complete – Content infrastructure and navigation system are now in place. Ready for content population.
-          </AlertDescription>
-        </Alert>
+      {/* Features Grid */}
+      <section className="py-16 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-12 space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Core Components
+            </h2>
+            <p className="text-muted-foreground">
+              A comprehensive framework built on transparent principles and proven practices
+            </p>
+          </div>
 
-        {/* Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="flex flex-col">
-            <CardHeader>
-              <CardTitle>Topologies</CardTitle>
-              <CardDescription>
-                Organizational structures and career patterns
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="mt-auto">
-              <Button asChild variant="link" className="px-0">
-                <Link href="/topologies">Explore Topologies →</Link>
-              </Button>
-            </CardContent>
-          </Card>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <Link href="/topologies" className="group">
+              <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50">
+                <CardContent className="p-6 space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
+                      Topologies
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      Organizational structures and career patterns
+                    </p>
+                  </div>
+                  <div className="text-sm font-medium text-primary">
+                    Explore →
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
 
-          <Card className="flex flex-col">
-            <CardHeader>
-              <CardTitle>Framework</CardTitle>
-              <CardDescription>
-                Career levels and progression pillars
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="mt-auto">
-              <Button asChild variant="link" className="px-0">
-                <Link href="/framework">View Framework →</Link>
-              </Button>
-            </CardContent>
-          </Card>
+            <Link href="/framework" className="group">
+              <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50">
+                <CardContent className="p-6 space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
+                      Framework
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      Career levels and progression pillars
+                    </p>
+                  </div>
+                  <div className="text-sm font-medium text-primary">
+                    View Framework →
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
 
-          <Card className="flex flex-col">
-            <CardHeader>
-              <CardTitle>Management</CardTitle>
-              <CardDescription>
-                Guidance for developing leaders
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="mt-auto">
-              <Button asChild variant="link" className="px-0">
-                <Link href="/management">Learn More →</Link>
-              </Button>
-            </CardContent>
-          </Card>
+            <Link href="/management" className="group">
+              <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50">
+                <CardContent className="p-6 space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
+                      Management
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      Guidance for developing leaders
+                    </p>
+                  </div>
+                  <div className="text-sm font-medium text-primary">
+                    Learn More →
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Get Started Section */}
+      <div className="container mx-auto px-4 pt-16 pb-4 md:pt-36 md:pb-12">
+        <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-5">
+            <div className="max-w-2xl mx-auto text-center text-4xl md:text-[44px] font-serif leading-[1.5]">
+              Get started with Career Topologies
+            </div>
+            <div className="text-center max-w-md mx-auto">
+              Explore the framework, understand the concepts, and start building better career paths.
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12 flex-wrap">
+            <Link
+              href="/manifesto"
+              className="flex flex-col items-center w-[150px] h-[150px] bg-background rounded-xl border border-white p-6 gap-4 justify-between hover:bg-white transition-colors duration-300"
+            >
+              <div className="font-mono font-normal uppercase leading-none text-[#7A7A7A]">
+                Manifesto
+              </div>
+              <div className="text-4xl">📜</div>
+              <div className="text-[#7A7A7A] text-center leading-[14px] text-[11px]">
+                Our core principles
+              </div>
+            </Link>
+
+            <Link
+              href="/framework"
+              className="flex flex-col items-center w-[150px] h-[150px] bg-background rounded-xl border border-white p-6 gap-4 justify-between hover:bg-white transition-colors duration-300"
+            >
+              <div className="font-mono font-normal uppercase leading-none text-[#7A7A7A]">
+                Framework
+              </div>
+              <div className="text-4xl">⚙️</div>
+              <div className="text-[#7A7A7A] text-center leading-[14px] text-[11px]">
+                Implementation guide
+              </div>
+            </Link>
+
+            <Link
+              href="/contributing"
+              className="flex flex-col items-center w-[150px] h-[150px] bg-background rounded-xl border border-white p-6 gap-4 justify-between hover:bg-white transition-colors duration-300"
+            >
+              <div className="font-mono font-normal uppercase leading-none text-[#7A7A7A]">
+                Contribute
+              </div>
+              <div className="text-4xl">🤝</div>
+              <div className="text-[#7A7A7A] text-center leading-[14px] text-[11px]">
+                Join the community
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
+
+      {/* Principles Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto space-y-8">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold">
+                Built on Core Principles
+              </h2>
+              <p className="text-muted-foreground">
+                Transparency, equity, and growth at every level
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-3 p-6 rounded-lg border bg-card">
+                <h3 className="text-lg font-semibold">Transparent Progression</h3>
+                <p className="text-sm text-muted-foreground">
+                  Clear expectations and criteria at every career level
+                </p>
+              </div>
+
+              <div className="space-y-3 p-6 rounded-lg border bg-card">
+                <h3 className="text-lg font-semibold">Equitable Opportunities</h3>
+                <p className="text-sm text-muted-foreground">
+                  Fair evaluation and advancement for all team members
+                </p>
+              </div>
+
+              <div className="space-y-3 p-6 rounded-lg border bg-card">
+                <h3 className="text-lg font-semibold">Flexible Paths</h3>
+                <p className="text-sm text-muted-foreground">
+                  Multiple career trajectories beyond traditional hierarchies
+                </p>
+              </div>
+
+              <div className="space-y-3 p-6 rounded-lg border bg-card">
+                <h3 className="text-lg font-semibold">Continuous Growth</h3>
+                <p className="text-sm text-muted-foreground">
+                  Ongoing development aligned with organizational goals
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center pt-8">
+              <Button asChild size="lg" variant="outline">
+                <Link href="/manifesto">Read Our Manifesto →</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
