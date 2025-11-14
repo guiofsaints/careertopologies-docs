@@ -34,31 +34,33 @@ export function Breadcrumbs() {
   const breadcrumbs = generateBreadcrumbs(pathname);
 
   return (
-    <nav aria-label="Breadcrumb" className="container py-4">
-      <ol className="flex items-center gap-2 text-sm text-muted-foreground">
-        {breadcrumbs.map((crumb, index) => {
-          const isLast = index === breadcrumbs.length - 1;
-          return (
-            <li key={crumb.href} className="flex items-center gap-2">
-              {index > 0 && (
-                <span className="text-muted-foreground/50">/</span>
-              )}
-              {isLast ? (
-                <span className="text-foreground font-medium">
-                  {crumb.label}
-                </span>
-              ) : (
-                <Link
-                  href={crumb.href}
-                  className="hover:text-foreground transition-colors"
-                >
-                  {crumb.label}
-                </Link>
-              )}
-            </li>
-          );
-        })}
-      </ol>
+    <nav aria-label="Breadcrumb" className="border-b bg-muted/30">
+      <div className="container mx-auto px-4 py-4">
+        <ol className="flex items-center gap-2 text-sm text-muted-foreground">
+          {breadcrumbs.map((crumb, index) => {
+            const isLast = index === breadcrumbs.length - 1;
+            return (
+              <li key={crumb.href} className="flex items-center gap-2">
+                {index > 0 && (
+                  <span className="text-muted-foreground/50">/</span>
+                )}
+                {isLast ? (
+                  <span className="text-foreground font-medium">
+                    {crumb.label}
+                  </span>
+                ) : (
+                  <Link
+                    href={crumb.href}
+                    className="hover:text-foreground transition-colors"
+                  >
+                    {crumb.label}
+                  </Link>
+                )}
+              </li>
+            );
+          })}
+        </ol>
+      </div>
     </nav>
   );
 }

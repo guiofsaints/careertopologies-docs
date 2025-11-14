@@ -6,7 +6,7 @@ interface PageHeroProps {
 export function PageHero({ title, description }: PageHeroProps) {
   return (
     <div className="border-b bg-muted/30">
-      <div className="container py-8 md:py-12">
+      <div className="container mx-auto px-4 py-8 md:py-12">
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">
           {title}
         </h1>

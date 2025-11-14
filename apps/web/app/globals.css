@@ -2,6 +2,15 @@
 
 /* Tailwind v4 CSS-first theme configuration */
 @theme {
+  /* Container configuration */
+  --container-center: true;
+  --container-padding: 1rem;
+  --container-max-width-sm: 640px;
+  --container-max-width-md: 768px;
+  --container-max-width-lg: 1024px;
+  --container-max-width-xl: 1280px;
+  --container-max-width-2xl: 1400px;
+
   /* Custom CSS variables will be used by shadcn/ui components */
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));

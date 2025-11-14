@@ -16,8 +16,8 @@ export default function TopologiesPage() {
         title="Career Topologies"
         description="Different organizational structures and career progression patterns"
       />
-      <div className="container py-8 md:py-12">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="container mx-auto px-4 py-8 md:py-12">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {topologies.length === 0 ? (
             <Card className="col-span-full">
               <CardHeader>
