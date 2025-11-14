@@ -3,7 +3,6 @@ export { Callout } from './callout';
 export { CodeBlock } from './code-block';
 export { TopologyComparison } from './topology-comparison';
 export { ImpactAutonomyMatrix } from './impact-autonomy-matrix';
-export { MDXContent } from './mdx-content';
 
 import { Callout } from './callout';
 import { CodeBlock } from './code-block';
