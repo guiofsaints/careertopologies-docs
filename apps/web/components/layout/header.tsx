@@ -12,9 +12,8 @@ interface NavItem {
 }
 
 const navigation: NavItem[] = [
-  { label: 'Topologies', href: '/topologies' },
-  { label: 'Shapes', href: '/shapes' },
   { label: 'Framework', href: '/framework' },
+  { label: 'Topologies', href: '/topologies' },
   { label: 'Management', href: '/management' },
   { label: 'Concepts', href: '/concepts' },
   { label: 'About', href: '/about' },
