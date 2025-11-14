@@ -1,608 +1,493 @@
 # Information Architecture
 
-## Site Structure Overview
+## Site Map and Content Structure
 
-Career Topologies follows a **hub-and-spoke information architecture** with the homepage serving as the central hub, directing visitors to distinct content areas organized by topic and audience need. The structure balances depth (detailed reference pages) with discoverability (clear navigation and cross-linking).
+Career Topologies follows a hub-and-spoke information architecture with the home page as the central hub, organized into four primary content pillars: **Foundational Concepts**, **Framework Structure**, **Specialized Topics**, and **Community Resources**.
+
+---
+
+## Content Hierarchy Tree
+
+```
+Career Topologies (/)
+│
+├── Foundational Concepts
+│   ├── About (/about)
+│   │   └── Overview of Career Topologies, its purpose, and development
+│   │
+│   ├── Concepts (/concepts)
+│   │   └── Core concepts: Topology, Leveling, Pillars, Shapes, Roles, Governance, Evolution
+│   │
+│   ├── Manifesto (/manifesto)
+│   │   └── The 8 Principles: Transparency, Fair Recognition, Equality, Consistency,
+│   │       Cooperation, Diversity, Ownership, Flexibility
+│   │
+│   └── Topologies (/topologies)
+│       ├── Y-Model (Management vs Technical tracks)
+│       ├── W-Model (Tri-track with hybrid paths)
+│       ├── Network Model (Fluid lateral movement)
+│       └── Comparative summary and selection guidance
+│
+├── Framework Structure (/framework)
+│   ├── Framework Overview (/framework)
+│   │   ├── Core Structure (4 elements)
+│   │   ├── Governance & Roles
+│   │   ├── Implementation Lifecycle (4 phases)
+│   │   └── Critical Considerations
+│   │
+│   ├── Leveling (/framework/leveling)
+│   │   ├── Objectives and Principles
+│   │   ├── Typical Levels (6 levels from Junior to C-Level)
+│   │   ├── Evaluation Elements
+│   │   ├── Impact × Autonomy Matrix [VISUAL]
+│   │   ├── Topology Alignment Diagrams [VISUAL]
+│   │   └── Integration with Career System
+│   │
+│   ├── Progression Pillars (/framework/progression)
+│   │   ├── Pillar Objectives
+│   │   ├── Pillar Structure (6 pillars)
+│   │   ├── Software Engineering Example
+│   │   ├── Proficiency Radar Chart [VISUAL]
+│   │   ├── Progression Matrix [VISUAL]
+│   │   ├── Examples by Level
+│   │   └── Applicability
+│   │
+│   └── Guidelines (/framework/guidelines)
+│       ├── Framework Implementation Flow [VISUAL]
+│       ├── How to Use the Framework
+│       │   ├── Ownership and Roles
+│       │   ├── Integration Points
+│       │   └── Roles & Responsibilities Matrix [VISUAL]
+│       ├── Communication Best Practices
+│       ├── Promotion Process Guide
+│       ├── Compensation and Titles
+│       ├── Governance and Updates
+│       └── Implementation Roadmap [VISUAL - 8 phases, 24 weeks]
+│
+├── Specialized Topics
+│   ├── Shapes (/shapes)
+│   │   ├── Professional Shapes
+│   │   │   ├── I-Shaped (Deep specialists)
+│   │   │   ├── T-Shaped (Specialists with cross-disciplinary awareness)
+│   │   │   └── Pi-Shaped (Multi-domain experts)
+│   │   └── Growth and Transitions
+│   │
+│   └── Management (/management)
+│       ├── Shared Responsibilities
+│       ├── Management Levels
+│       │   ├── Front-line Manager (Operational)
+│       │   ├── Middle Manager (Tactical)
+│       │   └── Top Manager (Strategic)
+│       ├── Developing New Leaders (/management/developing-leaders)
+│       │   ├── Why It Matters
+│       │   ├── Leadership Readiness Flowchart [VISUAL - 4 steps, 3 outcomes]
+│       │   └── Best Practices
+│       └── Future Considerations
+│
+└── Community Resources
+    ├── References (/references)
+    │   ├── Professional Profile (7 references)
+    │   ├── News and Articles (3 references)
+    │   ├── Structures and Frameworks (6 references)
+    │   ├── Studies, Laws and Principles (5 references)
+    │   └── Leadership, Management and Teams (7 references)
+    │
+    └── Contributing (/contributing)
+        ├── GitHub Repository
+        ├── Ways to Contribute
+        │   ├── Suggest Improvements
+        │   ├── Add Case Studies
+        │   ├── Build Tools
+        │   ├── Translate Content
+        │   └── Join the Discussion
+        ├── Maintainers
+        ├── Code of Conduct
+        └── Start Contributing (4-step process)
+```
 
 ---
 
 ## Navigation Patterns
 
-### Primary Navigation (Top Navigation Bar)
+### Primary Navigation (Top Nav)
 
-The main navigation provides access to the five core content areas:
+Location: Main header navigation bar
 
+**Structure:**
 ```
-┌─────────────────────────────────────────────────────────┐
-│  Career Topologies                                       │
-│  ┌─────┬───────────┬──────────┬───────────┬────────────┐│
-│  │About│ Framework │ Concepts │ Manifesto │Contributing││
-│  └─────┴───────────┴──────────┴───────────┴────────────┘│
-└─────────────────────────────────────────────────────────┘
+[Home] [About] [Framework] [Concepts] [Manifesto] [Contributing]
 ```
 
-**Navigation Strategy**: Task-based and topic-based hybrid
+**Characteristics:**
+- Emphasizes foundational concepts and framework entry point
+- Minimal to avoid cognitive overload
+- Framework serves as gateway to detailed sub-pages
 
-- **About**: Understanding the project (What is this?)
-- **Framework**: Implementation guide (How do I use it?)
-- **Concepts**: Learning fundamentals (What do terms mean?)
-- **Manifesto**: Principles and values (Why does this matter?)
-- **Contributing**: Community participation (How can I help?)
+---
 
-### Secondary Navigation (Footer)
+### Footer Navigation
 
-The footer provides access to specialized topics and supplementary content:
+Location: Site footer organized into 4 columns
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  ┌────────────┬────────┬────────────┬────────────┐      │
-│  │ Topologies │ Shapes │ Management │ References │      │
-│  └────────────┴────────┴────────────┴────────────┘      │
-└─────────────────────────────────────────────────────────┘
-```
+**Structure:**
 
-**Navigation Strategy**: Deeper dives into specific topics
+**Column 1: About Career Topologies**
+- Project description
+- Social media links (Instagram, LinkedIn, YouTube, GitHub)
+- Sponsorship link
 
-- **Topologies**: Career path models
-- **Shapes**: Skill profiles
-- **Management**: Leadership levels
-- **References**: Academic/industry sources
+**Column 2: Framework**
+- Overview
+- Manifesto
+- Core Concepts
+- Career Topologies
+- Career Shapes
+- Management Levels
 
-### Contextual Navigation
+**Column 3: Resources**
+- About
+- References
+- Contributing
+- Issues & Feedback (GitHub)
+- Discussions (GitHub)
 
-#### Breadcrumbs
+**Column 4: Community**
+- GitHub Repository
+- MIT License
+- Releases
+- Sponsor Project
 
-Used on sub-pages to show hierarchical position:
+**Characteristics:**
+- Comprehensive access to all site sections
+- Emphasizes community and open-source nature
+- Direct links to GitHub for engagement
 
+---
+
+### Breadcrumb Navigation
+
+Location: Below header on content pages
+
+**Structure:**
 ```
 Home > Framework > Leveling
 Home > Management > Developing Leaders
 ```
 
-#### Related Pages
+**Configuration:**
+- Hierarchical path showing parent-child relationships
+- Only appears on sub-pages (not home or top-level pages)
+- Supports: Framework sub-pages and Management sub-pages
 
-Dynamic component showing contextually relevant pages at the bottom of each page.
-
-#### In-content Links
-
-Extensive cross-linking within page content (e.g., "See /topologies for more →")
-
----
-
-## Hierarchical Content Structure
-
-### Level 1: Homepage (Entry Point)
-
-```
-/ (Home)
-│
-├─ Hero Section: Framework introduction and value proposition
-├─ Audience Section: Target user identification
-└─ Framework Section: Navigation to main areas
-```
-
-**Purpose**: Orientation and direction
-**Audience**: First-time visitors, all audiences
-**Content Type**: Overview, navigation
+**Characteristics:**
+- Aids orientation in deep content sections
+- Enables quick navigation up the hierarchy
+- Home icon on first breadcrumb for visual clarity
 
 ---
 
-### Level 2: Main Content Areas
+### Related Pages Navigation
 
-#### A. About Branch (`/about`)
+Location: Bottom of each content page
 
-```
-/about
-│
-└─ Single comprehensive page covering:
-   ├─ Purpose
-   ├─ What Makes It Different
-   ├─ Core Components
-   ├─ Governance & Roles
-   ├─ Management Model
-   ├─ Professional Shapes
-   ├─ Topology Models
-   └─ Ongoing Development
-```
+**Variants:**
 
-**Purpose**: Project overview and context
-**Audience**: All audiences, especially first-time learners
-**Content Type**: Explanatory, high-level
+1. **Explore Variant** - Used on conceptual/landing pages
+   - Grid of 4-6 cards with icons, titles, and descriptions
+   - Encourages broad exploration of related topics
+   - Examples: Home page (FrameworkSection), About page, Concepts page
 
----
+2. **Learn Variant** - Used on framework pages
+   - Emphasizes deeper learning journey
+   - Title: "Learn More"
+   - Links to sub-pages and related framework components
 
-#### B. Framework Branch (`/framework`)
+3. **Related Variant** - Used on detailed content pages
+   - Compact grid of related pages
+   - Context-aware suggestions based on current page
+   - Examples: Leveling → Progression, Guidelines → Contributing
 
-```
-/framework (Parent Page)
-│
-├─ Core Structure
-├─ Governance & Roles
-├─ Implementation Lifecycle
-├─ Critical Considerations
-│
-├─── /framework/leveling (Child Page)
-│    ├─ Leveling Objectives
-│    ├─ Guiding Principles
-│    ├─ Typical Levels (Interactive)
-│    ├─ Evaluation Elements
-│    ├─ Impact × Autonomy Matrix
-│    └─ Alignment with Topologies
-│
-├─── /framework/progression (Child Page)
-│    ├─ Pillar Objectives
-│    ├─ Pillar Structure
-│    ├─ Engineering Example
-│    ├─ Interactive Visualizations
-│    ├─ Examples by Level
-│    └─ Applicability
-│
-└─── /framework/guidelines (Child Page)
-     ├─ Implementation Flow
-     ├─ How to Use the Framework
-     ├─ Roles and Responsibilities
-     ├─ Communication Best Practices
-     ├─ Promotion Process
-     ├─ Compensation and Titles
-     ├─ Governance and Updates
-     └─ Implementation Roadmap
-```
-
-**Purpose**: Implementation guide and operational reference
-**Audience**: HR teams, managers implementing the framework
-**Content Type**: Procedural, detailed, actionable
+**Intelligence:**
+- Powered by `UnifiedRelatedPagesConfig`
+- Page-specific configurations with fallback logic
+- Categorizes pages as Framework, Concepts, Resources, or Specialized
+- Prevents circular navigation (never links to itself)
 
 ---
 
-#### C. Concepts Branch (`/concepts`)
+## Content Flows and User Journeys
 
-```
-/concepts
-│
-└─ Seven Core Concepts (Single Page):
-   ├─ 1. Career Topology
-   ├─ 2. Leveling
-   ├─ 3. Progression Pillars
-   ├─ 4. Shapes (Skill Profiles)
-   ├─ 5. Role of the Ladder
-   ├─ 6. Governance and Roles
-   └─ 7. Evolution & Flexibility
-```
+### Journey 1: Exploring the Framework (New Visitor)
 
-**Purpose**: Glossary and conceptual foundation
-**Audience**: All audiences, especially learners and contributors
-**Content Type**: Definitional, educational
+**Entry Point:** Home page
 
----
+**Flow:**
+1. **Home** (/) - Hero introduces Career Topologies concept and 3 topology models
+2. **Who is this for?** - Identifies if user is in target audience
+3. **Explore the Framework** - Six cards offer entry points:
+   - **For philosophy**: Manifesto → Concepts → About
+   - **For implementation**: Framework → Leveling → Progression → Guidelines
+   - **For community**: Contributing
 
-#### D. Manifesto Branch (`/manifesto`)
+**Key Decision Point:** After Concepts or Manifesto, users typically branch to:
+- Framework Overview (ready to implement)
+- Topologies (exploring structural options)
+- References (seeking evidence/validation)
 
-```
-/manifesto
-│
-└─ The 8 Principles (Single Page):
-   ├─ 1. Transparency
-   ├─ 2. Fair Recognition
-   ├─ 3. Equality
-   ├─ 4. Consistency
-   ├─ 5. Cooperation
-   ├─ 6. Diversity
-   ├─ 7. Ownership
-   └─ 8. Flexibility
-```
+**Typical Path for HR/People Ops:**
+Home → Framework → Guidelines → Leveling → Progression → Contributing (to provide feedback)
 
-**Purpose**: Values and guiding principles
-**Audience**: All stakeholders, especially decision-makers
-**Content Type**: Aspirational, philosophical
+**Typical Path for Managers:**
+Home → Management → Developing Leaders → Progression Pillars → Framework Guidelines
+
+**Typical Path for ICs:**
+Home → Concepts → Shapes → Topologies → Leveling → Progression
 
 ---
 
-#### E. Contributing Branch (`/contributing`)
+### Journey 2: Implementing a Career Framework (Organizational Leader)
 
-```
-/contributing
-│
-└─ Community Participation (Single Page):
-   ├─ GitHub Repository
-   ├─ Ways to Contribute
-   ├─ Maintainers
-   ├─ Code of Conduct
-   └─ Start Contributing
-```
+**Entry Point:** Framework page or About page
 
-**Purpose**: Community engagement and contribution guidelines
-**Audience**: Contributors, open-source participants
-**Content Type**: Instructional, community-focused
+**Flow:**
+1. **Framework Overview** - Understand 4 core elements and implementation lifecycle
+2. **Choose Topology** - Navigate to Topologies page
+   - Evaluate Y vs W vs Network model
+   - Review comparative summary table
+3. **Define Levels** - Navigate to Leveling page
+   - Review typical 6-level structure
+   - Explore Impact × Autonomy Matrix
+   - See topology alignment diagrams
+4. **Establish Pillars** - Navigate to Progression Pillars page
+   - Understand 6 standard pillars
+   - Review examples by level
+   - View proficiency visualizations
+5. **Operationalize** - Navigate to Guidelines page
+   - Review Roles & Responsibilities Matrix
+   - Study Implementation Roadmap (8 phases, 24 weeks)
+   - Understand promotion process
+   - Plan governance structure
+6. **Engage Community** - Navigate to Contributing
+   - Submit case study
+   - Request feedback via GitHub Discussions
 
----
-
-### Level 3: Specialized Topics (Footer Navigation)
-
-#### F. Topologies Branch (`/topologies`)
-
-```
-/topologies
-│
-└─ Career Path Models (Single Page):
-   ├─ Overview
-   ├─ Y-Model (with diagram)
-   ├─ W-Model (with diagram)
-   ├─ Network Model (with diagram)
-   ├─ Comparative Summary (table)
-   └─ Choosing a Topology
-```
-
-**Purpose**: Deep dive into career structure models
-**Audience**: HR, org design, senior leadership
-**Content Type**: Comparative, strategic
+**Visual Components Support:** Each step includes interactive diagrams/charts to make concepts concrete
 
 ---
 
-#### G. Shapes Branch (`/shapes`)
+### Journey 3: Career Development Conversation (Manager-IC)
 
-```
-/shapes
-│
-└─ Skill Profiles (Single Page):
-   ├─ Overview
-   ├─ I-Shaped Profile
-   ├─ T-Shaped Profile
-   ├─ Pi-Shaped Profile
-   ├─ Growth and Transitions
-   └─ Related Sections
-```
+**Entry Point:** Progression Pillars or Leveling page
 
-**Purpose**: Understanding skill diversity
-**Audience**: Hiring managers, career coaches, individuals
-**Content Type**: Descriptive, developmental
+**Flow:**
+1. **Progression Pillars** - Manager and IC review 6 pillars
+   - Use Proficiency Radar Chart to visualize current state
+   - Select target level (e.g., Mid → Senior)
+   - Compare current vs target proficiency
+2. **Leveling** - Review expectations for target level
+   - Click to expand level details in Interactive Leveling Table
+   - Understand impact scope, autonomy, complexity dimensions
+3. **Shapes** - Discuss professional profile
+   - Identify current shape (I, T, or Pi)
+   - Explore growth transitions
+4. **Topologies** - Clarify path options
+   - If considering leadership: Review Y-Model bifurcation
+   - If staying IC: Review Senior → Staff → Principal progression
+5. **Management (optional)** - If exploring leadership
+   - Navigate to Management page
+   - Review 3 layers of management
+   - Navigate to Developing Leaders
+   - Review Leadership Readiness Flowchart
 
----
-
-#### H. Management Branch (`/management`)
-
-```
-/management (Parent Page)
-│
-├─ Shared Responsibilities
-├─ Front-line Manager (Operational)
-├─ Middle Manager (Tactical)
-├─ Top Manager (Strategic)
-└─ Future Considerations
-│
-└─── /management/developing-leaders (Child Page)
-     ├─ Why It Matters
-     ├─ Leadership Readiness Flowchart
-     └─ Best Practices
-```
-
-**Purpose**: Leadership framework and development
-**Audience**: Current and aspiring managers, HR/L&D teams
-**Content Type**: Developmental, prescriptive
+**Outcome:** Clear development plan tied to specific pillars and level expectations
 
 ---
 
-#### I. References Branch (`/references`)
+### Journey 4: Validating Framework with Evidence (Skeptical Stakeholder)
 
-```
-/references
-│
-└─ Bibliography (Single Page):
-   ├─ Professional Profile
-   ├─ News and Articles
-   ├─ Structures and Frameworks
-   ├─ Studies, Laws and Principles
-   └─ Leadership, Management and Teams
-```
+**Entry Point:** About or References page
 
-**Purpose**: Academic and professional sources
-**Audience**: Researchers, contributors, validators
-**Content Type**: Reference, citation
+**Flow:**
+1. **About** - Understand framework origins and structure
+2. **Manifesto** - Review 8 principles for alignment with values
+3. **References** - Explore 28 citations organized by:
+   - Professional Profile (7) - T-shaped, Full Cycle, Engineer/Manager Pendulum
+   - News & Articles (3) - Pay equity cases, discrimination lawsuits
+   - Frameworks (6) - Dropbox, SFIA, progression.fyi, levels.fyi
+   - Studies (5) - Peter Principle, Dunbar's Number, Maslow
+   - Management (7) - Buffer, Google, Team Topologies, OKRs
+4. **Framework** - See how principles translate to structure
+5. **Contributing** - Engage with community for questions/concerns
 
----
-
-## Content Flow Patterns
-
-### 1. Progressive Disclosure Flow
-
-**Pattern**: Broad → Specific → Detailed
-
-```
-Homepage (Overview)
-   ↓
-About (What is this?)
-   ↓
-Framework (How does it work?)
-   ↓
-Leveling/Progression/Guidelines (Deep details)
-```
-
-**Use Case**: New visitors learning about the framework
+**Key Validation Points:**
+- Academic grounding (Maslow, Dunbar, Metcalfe's Law)
+- Industry case studies (Netflix, Slack, Google, Buffer, Dropbox)
+- Open-source transparency (MIT License, GitHub)
+- Evidence of pay equity problems (news articles justifying need)
 
 ---
 
-### 2. Topic-First Flow
+## Visual Components and Dashboard Elements
 
-**Pattern**: Concept → Application → Implementation
+### Interactive Charts and Widgets
 
-```
-Concepts (Definitions)
-   ↓
-Topologies/Shapes/Management (Models)
-   ↓
-Framework > Guidelines (Implementation)
-```
-
-**Use Case**: Users exploring specific topics before implementation
+#### 1. **Interactive Leveling Table** (Leveling page)
+- **Type**: Expandable accordion table
+- **Data**: 6 career levels (Junior → Director/VP/C-Level)
+- **Interaction**: Click to expand full details (autonomy, complexity, expectations)
+- **Purpose**: Provide at-a-glance level overview with drill-down capability
+- **Location in Journey**: "Define Levels" step in implementation flow
 
 ---
 
-### 3. Implementation Flow
-
-**Pattern**: Strategic → Tactical → Operational
-
-```
-Manifesto (Why/Principles)
-   ↓
-Framework (What/Structure)
-   ↓
-Guidelines (How/Process)
-   ↓
-Leveling/Progression (Details)
-```
-
-**Use Case**: Organizations planning adoption
+#### 2. **Impact × Autonomy Matrix** (Leveling page)
+- **Type**: 2D scatter plot
+- **Axes**: Scope of Impact (x-axis), Degree of Autonomy (y-axis)
+- **Data Points**: 6 levels positioned relationally
+- **Interaction**: Hover to reveal level name
+- **Purpose**: Visualize level relationships beyond simple hierarchy
+- **Location in Journey**: Leveling exploration for pattern recognition
 
 ---
 
-### 4. Role-Based Flow
-
-**Pattern**: Role identification → Relevant content
-
-```
-Audience Section (Role match)
-   ↓
-Explore Framework (Entry by need)
-   ↓
-   ├─ HR → Guidelines, Governance
-   ├─ Managers → Progression, Management
-   ├─ ICs → Leveling, Shapes
-   └─ Contributors → Contributing, References
-```
-
-**Use Case**: Direct navigation for specific user roles
+#### 3. **Proficiency Radar Chart** (Progression Pillars page)
+- **Type**: Interactive spider/radar chart
+- **Axes**: 6 progression pillars radiating from center
+- **Scale**: 1-5 proficiency per pillar
+- **Interaction**: Level selector tabs (Junior → Distinguished)
+- **Side Panel**: Horizontal bar graphs showing numerical values
+- **Purpose**: Make abstract "seniority" concrete and multi-dimensional
+- **Location in Journey**: Career development conversations, self-assessment
 
 ---
 
-## Information Scent and Findability
-
-### Primary Entry Points by User Intent
-
-| User Intent                 | Entry Point                     | Next Steps           |
-| --------------------------- | ------------------------------- | -------------------- |
-| "What is this project?"     | Homepage → About                | Concepts, Manifesto  |
-| "How do I implement this?"  | Homepage → Framework            | Guidelines, Leveling |
-| "What does this term mean?" | Any page → Concepts             | Related topic pages  |
-| "What career paths exist?"  | Framework → Topologies          | Shapes, Management   |
-| "How do I evaluate people?" | Framework → Progression         | Leveling, Guidelines |
-| "How do I contribute?"      | Any page → Contributing         | GitHub, References   |
-| "What are the principles?"  | About → Manifesto               | Framework            |
-| "How do leaders grow?"      | Management → Developing Leaders | Framework            |
+#### 4. **Progression Matrix** (Progression Pillars page)
+- **Type**: Heat map table
+- **Rows**: 5 career levels (Junior → Principal)
+- **Columns**: 6 progression pillars
+- **Color Intensity**: Darker = higher proficiency (1-5 scale)
+- **Purpose**: Show proficiency growth patterns across levels and pillars
+- **Location in Journey**: Calibration, understanding level gaps
 
 ---
 
-## Visual Hierarchy and Content Organization
-
-### Page Structure Pattern (Consistent across pages)
-
-```
-┌─────────────────────────────────────────┐
-│  Page Hero                               │
-│  ├─ Title                                │
-│  └─ Description                          │
-├─────────────────────────────────────────┤
-│  Section 1 (Overview/Introduction)      │
-├─────────────────────────────────────────┤
-│  Section 2 (Core Content)                │
-│  ├─ Subsection A                         │
-│  ├─ Subsection B                         │
-│  └─ Subsection C                         │
-├─────────────────────────────────────────┤
-│  Section 3 (Details/Examples)            │
-├─────────────────────────────────────────┤
-│  Section 4 (Application/Next Steps)     │
-├─────────────────────────────────────────┤
-│  Related Pages                           │
-└─────────────────────────────────────────┘
-```
-
-### Content Block Types
-
-1. **Explanatory Blocks**: Text-heavy sections explaining concepts
-2. **Visual Blocks**: Diagrams, charts, matrices
-3. **Interactive Blocks**: Expandable sections, tabbed content
-4. **List/Table Blocks**: Structured comparisons or enumerations
-5. **Call-to-Action Blocks**: Links to related content or GitHub
-6. **Example Blocks**: Concrete scenarios or use cases
+#### 5. **Leadership Readiness Flowchart** (Developing Leaders page)
+- **Type**: Interactive process flowchart
+- **Stages**: 4 sequential steps
+- **Outcomes**: 3 terminal states (Promotion, Further Development, Exit)
+- **Interaction**: Hover on steps for detail tooltips
+- **Mobile Adaptation**: Horizontal (desktop) vs Vertical (mobile) layouts
+- **Purpose**: Demystify leadership development process
+- **Location in Journey**: Manager exploring leadership pipeline
 
 ---
 
-## Cross-Linking Strategy
-
-### Explicit Cross-References
-
-Pages include explicit "See X for more →" links when:
-
-- Referencing a concept defined elsewhere
-- Pointing to detailed implementation of a topic
-- Suggesting related reading
-
-### Related Pages Component
-
-Every major page includes a "Related Pages" section showing:
-
-- Contextually relevant pages (configured per page)
-- Either complementary topics or next logical steps
-- Typically 2-4 related pages
-
-### Breadcrumb Navigation
-
-Sub-pages show their position in hierarchy:
-
-- Provides context
-- Enables quick navigation to parent
-- Reinforces mental model
+#### 6. **Framework Flow Diagram** (Guidelines page)
+- **Type**: Sequential process diagram
+- **Steps**: 4 stages (Topology → Ladder → Levels → Pillars)
+- **Purpose**: Visualize implementation sequence
+- **Location in Journey**: "Operationalize" step before detailed planning
 
 ---
 
-## Mobile and Responsive Considerations
-
-The information architecture accommodates small screens through:
-
-1. **Collapsible Sections**: Complex pages use accordions/expandables
-2. **Mobile Drawer**: Navigation compressed into mobile menu
-3. **Priority Order**: Most important content appears first
-4. **Simplified Visualizations**: Charts adapt for small screens
-
----
-
-## Search and Discovery
-
-While the site doesn't currently implement search, the information architecture supports discovery through:
-
-1. **Clear Labeling**: Descriptive page titles and section headings
-2. **Multiple Pathways**: Content reachable through multiple routes
-3. **Comprehensive Index**: Concepts page serves as glossary
-4. **External Search**: Content structure optimized for search engine indexing
+#### 7. **Roles & Responsibilities Matrix** (Guidelines page)
+- **Type**: Responsibility matrix (RACI-like)
+- **Rows**: 4 roles (HR, Team Leads, Managers, Employees)
+- **Columns**: 6 responsibilities (Governance, Reviews, Development, Feedback, Promotion, Calibration)
+- **Cells**: Primary, Secondary, Support, None
+- **Purpose**: Clarify ownership to prevent gaps and conflicts
+- **Location in Journey**: Governance planning phase
 
 ---
 
-## Hierarchical Outline (Full Site Map)
-
-```
-Career Topologies
-│
-├─ / (Home)
-│  ├─ Hero Section
-│  ├─ Audience Section
-│  └─ Framework Section
-│
-├─ /about
-│  ├─ Purpose
-│  ├─ What Makes It Different
-│  ├─ Core Components
-│  ├─ Governance & Roles
-│  ├─ Management Model
-│  ├─ Professional Shapes
-│  ├─ Career Topologies
-│  └─ Ongoing Development
-│
-├─ /framework
-│  ├─ Core Structure
-│  ├─ Governance & Roles
-│  ├─ Implementation Lifecycle
-│  ├─ Critical Considerations
-│  │
-│  ├─ /leveling
-│  │  ├─ Objectives
-│  │  ├─ Guiding Principles
-│  │  ├─ Typical Levels
-│  │  ├─ Evaluation Elements
-│  │  ├─ Impact × Autonomy Matrix
-│  │  └─ Alignment with Topologies
-│  │
-│  ├─ /progression
-│  │  ├─ Objectives
-│  │  ├─ Pillar Structure
-│  │  ├─ Software Engineering Example
-│  │  ├─ Interactive Visualizations
-│  │  ├─ Examples by Level
-│  │  └─ Applicability
-│  │
-│  └─ /guidelines
-│     ├─ Implementation Flow
-│     ├─ How to Use
-│     ├─ Roles and Responsibilities
-│     ├─ Communication Best Practices
-│     ├─ Promotion Process
-│     ├─ Compensation and Titles
-│     ├─ Governance and Updates
-│     └─ Implementation Roadmap
-│
-├─ /concepts
-│  ├─ 1. Career Topology
-│  ├─ 2. Leveling
-│  ├─ 3. Progression Pillars
-│  ├─ 4. Shapes
-│  ├─ 5. Role of the Ladder
-│  ├─ 6. Governance and Roles
-│  └─ 7. Evolution & Flexibility
-│
-├─ /manifesto
-│  ├─ The 8 Principles
-│  │  ├─ 1. Transparency
-│  │  ├─ 2. Fair Recognition
-│  │  ├─ 3. Equality
-│  │  ├─ 4. Consistency
-│  │  ├─ 5. Cooperation
-│  │  ├─ 6. Diversity
-│  │  ├─ 7. Ownership
-│  │  └─ 8. Flexibility
-│  └─ Compass Section
-│
-├─ /topologies
-│  ├─ Overview
-│  ├─ Y-Model
-│  ├─ W-Model
-│  ├─ Network Model
-│  ├─ Comparative Summary
-│  └─ Choosing a Topology
-│
-├─ /shapes
-│  ├─ Overview
-│  ├─ I-Shaped
-│  ├─ T-Shaped
-│  ├─ Pi-Shaped
-│  ├─ Growth and Transitions
-│  └─ Related Sections
-│
-├─ /management
-│  ├─ Shared Responsibilities
-│  ├─ Front-line Manager
-│  ├─ Middle Manager
-│  ├─ Top Manager
-│  ├─ Developing New Leaders (link)
-│  ├─ Future Considerations
-│  │
-│  └─ /developing-leaders
-│     ├─ Why It Matters
-│     ├─ Leadership Readiness Flowchart
-│     └─ Best Practices
-│
-├─ /contributing
-│  ├─ GitHub Repository
-│  ├─ Ways to Contribute
-│  ├─ Maintainers
-│  ├─ Code of Conduct
-│  └─ Start Contributing
-│
-└─ /references
-   ├─ Professional Profile
-   ├─ News and Articles
-   ├─ Structures and Frameworks
-   ├─ Studies, Laws and Principles
-   └─ Leadership, Management and Teams
-```
+#### 8. **Implementation Timeline** (Guidelines page)
+- **Type**: Gantt chart
+- **Duration**: 24 weeks (8 phases)
+- **Visual**: Horizontal bars showing phase durations and overlaps
+- **Phases**: Kickoff → Select Topology → Define Levels/Pillars → Align Principles → Pilot → Rollout → Embed → Maintain
+- **Purpose**: Set realistic expectations for implementation timeline
+- **Location in Journey**: Planning and stakeholder alignment
 
 ---
 
-## Summary
+#### 9. **Topology Alignment Diagrams** (Leveling page)
+- **Type**: Side-by-side structural diagrams
+- **Models**: Y-Shape, W-Shape, Network
+- **Content**: Level-to-path mappings showing how 6 levels distribute across topology tracks
+- **Purpose**: Show how leveling integrates with topology choice
+- **Location in Journey**: Connecting levels to organizational structure
 
-The Career Topologies information architecture follows a **hub-and-spoke model** with a clear hierarchy, multiple navigation pathways, and extensive cross-linking. The structure supports:
+---
 
-1. **Multiple user journeys** (learning, implementing, contributing)
-2. **Progressive disclosure** (overview → detail)
-3. **Role-based access** (HR, managers, ICs, contributors)
-4. **Topic exploration** (concepts, models, processes)
-5. **Implementation support** (strategic → tactical → operational)
+#### 10. **Topology Model Diagrams** (Topologies page)
+- **Type**: Career path diagrams
+- **Models**: Y-Model, W-Model, Network Model
+- **Visual**: Path bifurcations, convergence points, lateral connections
+- **Responsive**: Image on left (desktop) or top (mobile), text on right/bottom
+- **Purpose**: Make abstract topology concepts visually concrete
+- **Location in Journey**: Topology selection and comparison
 
-The architecture balances **comprehensiveness** (deep coverage of topics) with **usability** (clear paths, consistent structure) to serve diverse audience needs while maintaining a cohesive user experience.
+---
+
+## Search and Discovery Patterns
+
+### Primary Discovery Methods
+
+1. **Top-down Navigation** (Primary Nav → Sub-pages)
+   - Suitable for first-time visitors
+   - Emphasizes conceptual understanding before details
+
+2. **Footer Deep Links** (Direct to any page)
+   - Suitable for returning visitors
+   - Enables quick access to known resources
+
+3. **Breadcrumb Up-navigation** (Child → Parent → Home)
+   - Suitable for users in deep content
+   - Supports hierarchical orientation
+
+4. **Related Pages Suggestions** (Context-aware recommendations)
+   - Suitable for exploratory learning
+   - Encourages non-linear discovery
+
+5. **In-content Links** (Contextual cross-references)
+   - Suitable for deep research
+   - Example: Concepts page links to /topologies, /shapes, /framework
+
+---
+
+## Content Organization Principles
+
+1. **Progressive Disclosure**: Framework starts with overview, drills down to Leveling/Pillars/Guidelines
+2. **Modular Independence**: Each page is self-contained with complete context
+3. **Consistent Structure**: All content pages use PageHero → Sections → RelatedPages pattern
+4. **Visual Anchoring**: Key concepts paired with interactive diagrams/charts
+5. **Multiple Entry Points**: No assumption of linear reading path
+6. **Redundant Navigation**: Same content reachable via top nav, footer, breadcrumbs, and related pages
+7. **Category Coherence**: Pages grouped by Framework, Concepts, Resources, Specialized
+8. **Link Density Balance**: Average 4-6 related page suggestions to avoid choice paralysis
+
+---
+
+## Mobile Responsiveness Patterns
+
+Visual components adapt to mobile with specific strategies:
+
+- **Flowcharts**: Horizontal flow (desktop) → Vertical flow (mobile)
+- **Tables/Matrices**: Horizontal scroll with sticky column headers
+- **Radar Charts**: Scale down with simplified labeling
+- **Images**: Full-width on mobile, side-by-side on desktop
+- **Navigation**: Hamburger menu pattern (assumed based on standard practice)
+- **Related Pages**: 1 column (mobile) → 2-3 columns (tablet/desktop)
+
+---
+
+## Summary: Information Architecture Strengths
+
+1. **Clear Hub-and-Spoke**: Home serves as orientation point
+2. **Depth Without Clutter**: 3-level maximum hierarchy (Home → Framework → Leveling)
+3. **Multiple Navigation Paths**: Suits different user mental models
+4. **Visual Reinforcement**: Charts/diagrams embedded at relevant decision points
+5. **Community Integration**: GitHub links at multiple touchpoints
+6. **Academic Grounding**: References page establishes credibility
+7. **Implementation-Ready**: Guidelines page bridges theory to practice
+8. **Role-Based Journeys**: Different paths for HR, Managers, ICs, Leaders

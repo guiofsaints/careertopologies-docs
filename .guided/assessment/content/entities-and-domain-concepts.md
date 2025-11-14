@@ -1,718 +1,566 @@
-# Entities and Domain Concepts
+# Domain Entities and Concepts
 
 ## Overview
 
-This document identifies the core domain entities, their attributes, relationships, and associated workflows as inferred from the user-facing content and UI copy in the Career Topologies codebase.
+This document extracts and organizes the domain model of the Career Topologies framework based on analysis of all user-facing content. It identifies entities, their attributes, relationships, workflows, states, and key metrics visible through the application.
 
 ---
 
 ## Core Domain Entities
 
 ### 1. Career Level
+**Description:** Hierarchical position in a career track indicating scope, autonomy, and impact
 
-**Description**: A defined stage in an individual's career progression within an organization, representing increasing scope, complexity, and autonomy.
+**Attributes:**
+- Level Number (1-8)
+- Level Name (e.g., "Junior IC", "Senior IC", "Staff IC", "Principal IC")
+- Track Type (Individual Contributor vs Manager)
+- Scope (Individual → Team → Department → Organization)
+- Autonomy Level (Guided → Independent → Leading → Defining)
+- Impact Dimension (Task → Feature → Product → Platform → Ecosystem)
+- Required Proficiencies (mapped to 6 Pillars)
+- Typical Responsibilities
+- Decision-making Authority
 
-**Attributes**:
+**Relationships:**
+- Belongs to: Career Track (IC or Manager)
+- Maps to: Professional Shape (I, T, Pi)
+- Defined by: Proficiency across Progression Pillars
+- Positioned in: Topology Model (Y, W, Network)
 
-- Title/Name (e.g., Junior, Mid-level, Senior, Staff, Principal, Lead, Director, VP, C-Level)
-- Number/Order (1-6 hierarchical position)
-- Scope of Impact (Team, Squad/Project, Tribe/Domain, Product/Platform, Unit/Business, Company/Market)
-- Degree of Autonomy (High supervision → Strategic direction)
-- Complexity (Well-defined tasks → Organizational transformation)
-- Expectations (list of key responsibilities and behaviors)
-- Compensation Band (optional, may be internal or visible)
+**States/Lifecycle:**
+- Entry criteria
+- Progression criteria
+- Promotion evaluation
+- Level maintenance
 
-**Relationships**:
-
-- Belongs to a Career Track/Ladder
-- Preceded by (lower level)
-- Followed by (higher level)
-- Evaluated against Progression Pillars
-- Aligned with Topology Model
-
-**States/Transitions**:
-
-- Current level (where individual is now)
-- Target level (where individual aims to be)
-- Promotion readiness (meeting criteria for next level)
-
----
-
-### 2. Career Topology
-
-**Description**: A structural model that defines the possible career paths and transitions within an organization.
-
-**Types/Variants**:
-
-1. **Y-Model**: Bifurcation into Management or IC (Individual Contributor) tracks
-2. **W-Model**: Three tracks (Management, IC, Project/Tech Management hybrid)
-3. **Network Model**: Fluid, non-linear transitions across domains
-
-**Attributes**:
-
-- Name/Type (Y, W, Network, or Custom)
-- Number of Tracks (2, 3, or fluid)
-- Flexibility Level (Low, Medium, High)
-- Structure Type (Hierarchical, Matrix, Horizontal/Network-based)
-- Recommended Organizational Context (startup, growth, mature)
-- Strengths (list of advantages)
-- Use Cases (scenarios where model fits)
-
-**Relationships**:
-
-- Contains multiple Career Tracks
-- Applicable to Organization Type
-- Influences Career Level definitions
+**Visibility:** Leveling page (interactive table), Impact×Autonomy Matrix, Topology Alignment Diagrams
 
 ---
 
-### 3. Career Track
+### 2. Progression Pillar
+**Description:** Core competency dimension for professional development
 
-**Description**: A specific path of progression within a topology, representing a distinct specialization or role focus.
+**Attributes:**
+- Pillar Name (6 total):
+  1. Technical Expertise
+  2. Problem Solving & Innovation
+  3. Communication & Collaboration
+  4. Leadership & Influence
+  5. Delivery & Execution
+  6. Learning & Adaptability
+- Pillar Description
+- Proficiency Levels (1-5 scale)
+- Level-specific Expectations
+- Skill Examples per Level
+- Assessment Criteria
 
-**Common Track Types**:
+**Relationships:**
+- Defines: Career Level requirements
+- Measured by: Proficiency Radar Chart
+- Differs across: Professional Shapes
 
-- **Individual Contributor (IC) Track**: Technical depth, architecture, mentoring, innovation
-- **Management Track**: People management, business ownership
-- **Hybrid/Project Track**: Technical leadership without direct reports, project ownership
+**States:**
+- Developing
+- Proficient
+- Expert
+- Master
+- Thought Leader
 
-**Attributes**:
-
-- Track Name (e.g., "Technical IC", "Engineering Management", "Technical Leadership")
-- Track Owner (person responsible for track definition and evolution)
-- Progression Levels (list of levels within this track)
-- Specialization Domain (Engineering, Product, Design, etc.)
-- Transition Rules (how to move between tracks)
-
-**Relationships**:
-
-- Part of a Career Topology
-- Contains multiple Career Levels
-- Evaluated using Progression Pillars
-- Governed by Track Owner
-
----
-
-### 4. Progression Pillar
-
-**Description**: A competency dimension used to evaluate growth and readiness for career advancement.
-
-**Common Pillars**:
-
-1. **Delivery & Execution**: Ability to deliver value with quality, consistency, and efficiency
-2. **Technical Domain / Specialization**: Depth in core knowledge of the function
-3. **Collaboration & Influence**: Team contribution, communication, influence without authority
-4. **Autonomy & Decision Making**: Ability to act with increasing independence
-5. **Initiative & Innovation**: Proposes solutions, improvements, experiments, and learns
-6. **Mentoring & Multiplication**: Develops others, shares knowledge, contributes to culture
-
-**Attributes**:
-
-- Pillar Name
-- Description
-- Maturity Levels (1-5 scale: Basic → Developing → Proficient → Advanced → Expert)
-- Weight/Importance (may vary by track or level)
-- Evaluation Criteria (specific behaviors or outcomes)
-- Examples by Level (concrete manifestations at each career level)
-
-**Relationships**:
-
-- Evaluates individuals at Career Levels
-- Varies by Career Track
-- Used in Performance Reviews
-- Guides Individual Development Plans (IDPs)
-
-**Measurements**:
-
-- Maturity Score (1-5 for each pillar)
-- Radar Chart Visualization (showing profile across pillars)
-- Gap Analysis (current vs expected for level)
+**Visibility:** Progression Pillars page (radar chart, progression matrix, examples)
 
 ---
 
-### 5. Professional Shape (Skill Profile)
+### 3. Career Topology
+**Description:** Structural model defining career paths in an organization
 
-**Description**: A model describing the depth and breadth of an individual's skills and expertise.
+**Attributes:**
+- Topology Type:
+  - **Y-Model:** IC and Manager tracks diverge after mid-level
+  - **W-Model:** IC, Manager, and Technical Lead tracks with bidirectional movement
+  - **Network Model:** Fluid transitions based on projects and skills
+- Number of Tracks (1, 2, or 3+)
+- Transition Rules
+- Flexibility Level
+- Organizational Size Fit
+- Cultural Alignment
 
-**Shape Types**:
+**Relationships:**
+- Contains: Career Tracks
+- Supports: Professional Shapes
+- Enables: Career Transitions
 
-1. **I-Shaped**: Deep specialist in single discipline
-2. **T-Shaped**: Depth in one area + breadth across adjacent areas
-3. **Pi-Shaped (Comp-Shaped)**: Depth in two+ areas + strategic breadth
+**Comparative Attributes:**
+| Aspect | Y-Model | W-Model | Network Model |
+|--------|---------|---------|---------------|
+| Tracks | 2 (IC, Manager) | 3+ (IC, Manager, Tech Lead) | Fluid/Multiple |
+| Flexibility | Low | Medium | High |
+| Best For | Traditional orgs | Growing tech orgs | Innovative/startup environments |
+| Transitions | One-time fork | Bidirectional | Continuous/dynamic |
 
-**Attributes**:
-
-- Shape Type (I, T, Pi)
-- Primary Specialization(s) (1 for I, 1 for T, 2+ for Pi)
-- Breadth Areas (adjacent skills/domains)
-- Common Roles (typical job titles for this shape)
-- Strengths (advantages of this profile)
-- Considerations (contexts where shape works best)
-
-**Relationships**:
-
-- Describes an Individual
-- Influences Role Fit
-- Evolves over Career Journey
-- Impacts Team Composition
-
-**Transitions**:
-
-- I → T (acquiring breadth)
-- T → Pi (deepening second specialization)
-- Shape evolution as career progresses
+**Visibility:** Topologies page (diagrams, comparative table)
 
 ---
 
-### 6. Ladder (Career Framework)
+### 4. Professional Shape
+**Description:** Skill profile characterizing breadth vs depth of expertise
 
-**Description**: A documented structure combining topology, leveling, and progression criteria to guide career development for a specific discipline or organization.
+**Attributes:**
+- Shape Type:
+  - **I-Shaped:** Deep expertise in single domain
+  - **T-Shaped:** Deep expertise in one domain + broad knowledge across others
+  - **Pi-Shaped:** Deep expertise in two domains + broad knowledge
+- Primary Domain(s)
+- Secondary Domains
+- Breadth Score
+- Depth Score(s)
+- Learning Path
 
-**Attributes**:
+**Relationships:**
+- Associated with: Career Levels
+- Influences: Role Design
+- Evolves through: Progression Pillars
 
-- Ladder Name (e.g., "Engineering Ladder", "Product Ladder")
-- Topology Model (Y, W, or Network)
-- Level Definitions (complete set of levels)
-- Progression Pillars (evaluation dimensions)
-- Promotion Guidelines (rules for advancement)
-- Governance Structure (ownership and maintenance)
-- Version/Last Updated
+**States:**
+- Emerging specialist (I)
+- Developing breadth (I → T)
+- Multi-specialist (T → Pi)
 
-**Relationships**:
-
-- Owned by Track Owner
-- Contains Career Levels
-- Uses Progression Pillars
-- Follows a Topology Model
-- Applied to Individuals
-- Governed by Governance Process
-
-**Lifecycle States**:
-
-- Draft (being designed)
-- Pilot (testing with small group)
-- Active (organization-wide use)
-- Under Review (scheduled update)
-- Deprecated (replaced by new version)
+**Visibility:** Shapes page (descriptions, examples)
 
 ---
 
-### 7. Individual (Professional/Employee)
+### 5. Management Level
+**Description:** Hierarchical management role with specific responsibilities
 
-**Description**: A person navigating their career within the organization using the framework.
+**Attributes:**
+- Level Name:
+  1. **First-Line Manager:** Leads individual contributors
+  2. **Middle Manager:** Leads managers and complex initiatives
+  3. **Senior Leader:** Sets strategy and leads departments
+- Typical Team Size
+- Reporting Structure
+- Key Responsibilities
+- Required Competencies
+- Decision Authority
+- Strategic Scope
 
-**Attributes**:
+**Relationships:**
+- Part of: Manager Career Track
+- Progression from: IC Track (via Y/W topology)
+- Develops via: Leadership Development Process
 
-- Current Level
-- Current Track
-- Professional Shape
-- Tenure/Time in Current Level
-- Progression Pillar Scores (current maturity)
-- Career Goals/Aspirations
-- Individual Development Plan (IDP)
-
-**Relationships**:
-
-- Assigned to a Career Level
-- Works within a Career Track
-- Evaluated against Progression Pillars
-- Has a Professional Shape
-- Managed by a Manager
-- Supported by HR/People Team
-
-**Workflows/Journeys**:
-
-- Onboarding (learning the framework)
-- Self-Assessment (evaluating own progression)
-- Career Conversations (1:1s with manager)
-- Development (working on growth areas)
-- Promotion Process (advancing to next level)
-- Track Transition (moving between tracks)
+**Visibility:** Management page (tables, lists), Developing Leaders page (flowchart)
 
 ---
 
-### 8. Manager
+### 6. Leadership Readiness State
+**Description:** Stage in the leadership development process
 
-**Description**: A leader responsible for applying the framework, developing people, and making career decisions.
+**Attributes:**
+- Readiness Phase:
+  1. **Assessment:** Evaluate interest, skills, and organizational need
+  2. **Preparation:** Training, shadowing, mentorship
+  3. **Transition:** Trial period with support
+  4. **Consolidation:** Full role assumption with ongoing development
+- Outcome Type:
+  - Promoted to manager
+  - Continues as senior IC
+  - Needs more development
+- Assessment Criteria
+- Support Mechanisms
+- Timeline
 
-**Manager Levels**:
+**Relationships:**
+- Transition from: IC Track to Management Track
+- Evaluated via: Progression Pillars assessment
+- Supported by: Framework Guidelines
 
-1. **Front-line Manager (Operational)**
-
-   - Scope: Day-to-day team execution
-   - Horizon: 1-3 months
-   - Focus: Remove blockers, guide ICs
-
-2. **Middle Manager (Tactical)**
-
-   - Scope: Translate strategy, support leaders
-   - Horizon: 6-12 months
-   - Focus: Build teams, coach managers, align goals
-
-3. **Top Manager (Strategic)**
-   - Scope: Long-term direction, organizational health
-   - Horizon: 1-5 years
-   - Focus: Define vision, restructure, represent externally
-
-**Shared Responsibilities** (all managers):
-
-- Hire and offboard
-- Performance management
-- Structured feedback and evaluations
-- Regular 1:1s
-- Succession planning
-- Capacity management
-- Prioritization
-- Team health and inclusivity
-
-**Relationships**:
-
-- Manages Individuals
-- Applies Ladder and Progression Pillars
-- Participates in Calibration
-- Supported by Track Owner and HR
-- Reports to Higher-Level Manager
-
-**Workflows**:
-
-- Feedback Cycles
-- Performance Reviews
-- 1:1 Meetings
-- Promotion Proposals
-- Calibration Sessions
-- Team Planning
+**Visibility:** Developing Leaders page (Leadership Readiness Flowchart)
 
 ---
 
-### 9. Track Owner
+### 7. Framework Component
+**Description:** Structural element of the Career Topologies framework
 
-**Description**: A person responsible for defining, maintaining, and evolving a specific career track or discipline ladder.
+**Attributes:**
+- Component Name:
+  1. **Career Topologies (Y, W, Network)**
+  2. **Career Levels & Progressions**
+  3. **Proficiency Pillars**
+  4. **Professional Shapes**
+- Component Purpose
+- Implementation Difficulty
+- Interdependencies
+- Customization Options
 
-**Responsibilities**:
+**Relationships:**
+- Assembled into: Complete Framework
+- Governed by: Framework Governance
+- Implemented via: Implementation Lifecycle
 
-- Define progression criteria and expectations
-- Facilitate calibration sessions
-- Collect feedback and iterate on track
-- Support managers with guidance and resources
-- Version control and documentation
-
-**Relationships**:
-
-- Owns a Career Track/Ladder
-- Supports Managers
-- Collaborates with HR
-- Reports to Leadership
-- Engages with ICs for feedback
-
----
-
-### 10. HR / People Operations Team
-
-**Description**: The function responsible for governance, compliance, and integration of the career framework.
-
-**Responsibilities**:
-
-- Overall framework governance
-- Coordination of review cycles
-- Integration with compensation systems
-- Legal and policy compliance
-- Recruitment and onboarding support
-- System documentation
-- Data and reporting
-
-**Relationships**:
-
-- Supports Track Owners
-- Enables Managers
-- Serves Individuals
-- Interfaces with Compensation Team
-- Reports to Leadership
+**Visibility:** About page, Framework page
 
 ---
 
-### 11. Promotion / Advancement
+### 8. Implementation Phase
+**Description:** Stage in the framework adoption lifecycle
 
-**Description**: The process and decision to move an individual to a higher career level.
+**Attributes:**
+- Phase Name:
+  1. **Assessment:** Current state analysis
+  2. **Design:** Framework customization
+  3. **Pilot:** Small-scale testing
+  4. **Rollout:** Organization-wide deployment
+- Phase Duration (typical)
+- Key Activities
+- Deliverables
+- Success Criteria
+- Roles Involved
 
-**Attributes**:
+**Relationships:**
+- Part of: Implementation Lifecycle
+- Supported by: Framework Guidelines
+- Executed by: Implementation Team
 
-- Candidate (individual being considered)
-- Current Level → Target Level
-- Justification (evidence and rationale)
-- Proposal Date
-- Decision Status (Proposed, Under Review, Approved, Rejected, Deferred)
-- Effective Date (when promotion takes effect)
-
-**Process Stages**:
-
-1. **Manager Drafts Proposal**: Justification aligned to ladder
-2. **Peer Review**: Partner reviewer validates consistency
-3. **Calibration**: Group reviews cases together
-4. **HR Validation**: Ensures consistency across teams
-5. **Leadership Approval**: Final decision (VP/Director)
-6. **Communication**: Outcome shared with individual
-
-**Requirements**:
-
-- Sustained performance at next level
-- Maturity across most progression pillars
-- Peer feedback and delivery records
-- Mentorship evidence
-
-**Timeline**:
-
-- Review Windows (biannual or quarterly)
-- Submission Deadline
-- Review Period
-- Decision Communication
+**Visibility:** Framework page (lifecycle), Guidelines page (timeline Gantt chart)
 
 ---
 
-### 12. Calibration Session
-
-**Description**: A structured meeting where managers and leadership align on level expectations and evaluate candidates for promotion or leveling.
-
-**Attributes**:
-
-- Session Date
-- Participants (managers, track owners, HR)
-- Candidates Discussed
-- Framework Reference (ladder being used)
-- Decisions Made
-
-**Purposes**:
-
-- Ensure consistency in evaluations
-- Reduce bias
-- Share context across teams
-- Validate promotion proposals
-- Align on pillar interpretations
-
-**Relationships**:
-
-- Uses Ladder and Progression Pillars
-- Involves Managers and Track Owners
-- Results in Promotion Decisions
-- Governed by HR
-
----
-
-### 13. Individual Development Plan (IDP)
-
-**Description**: A personalized plan outlining an individual's growth goals and actions to progress in their career.
-
-**Attributes**:
-
-- Individual (person)
-- Current Assessment (pillar scores, strengths, gaps)
-- Target Level or Skills
-- Development Actions (learning, projects, mentorship)
-- Timeline/Milestones
-- Check-in Schedule
-
-**Relationships**:
-
-- Created for Individual
-- Based on Progression Pillars
-- Guided by Manager
-- References Career Level expectations
-- Tracked in 1:1s
-
----
-
-### 14. Feedback Cycle / Performance Review
-
-**Description**: A regular process for evaluating individual performance and progression against framework criteria.
-
-**Attributes**:
-
-- Review Period (quarterly, biannual, annual)
-- Individual Being Reviewed
-- Manager/Reviewer
-- Pillar-Based Assessment (scores or qualitative)
-- Strengths and Development Areas
-- Promotion Readiness
-- Actions/Next Steps
-
-**Relationships**:
-
-- Evaluates Individual
-- Uses Progression Pillars
-- References Career Level expectations
-- Informs Promotion Decisions
-- Feeds into IDP
-
----
-
-### 15. Compensation Band
-
-**Description**: A salary range associated with a career level, ensuring internal equity and market competitiveness.
-
-**Attributes**:
-
-- Level (associated career level)
-- Minimum Salary
-- Maximum Salary
-- Midpoint/Target
-- Currency/Market
-- Visibility (internal-only or transparent)
-
-**Relationships**:
-
-- Mapped to Career Level
-- Informed by Ladder
-- Managed by Compensation Team
-- Aligned with Promotion Decisions
-
----
-
-## Domain Workflows
-
-### Workflow 1: Individual Career Progression
+## Domain Relationships Map
 
 ```
-Onboarding (Learn Framework)
-   ↓
-Self-Assessment (Current Level, Pillar Scores)
-   ↓
-Career Conversation with Manager
-   ↓
-Create/Update IDP
-   ↓
-Execute Development Actions
-   ↓
-Regular Feedback (1:1s, Reviews)
-   ↓
-[Decision Point: Ready for Promotion?]
-   ├─ Yes → Promotion Process
-   └─ No → Continue Development
+Career Topologies Framework
+│
+├── Career Topology (Y/W/Network)
+│   ├── Career Track (IC, Manager, Tech Lead)
+│   │   ├── Career Level (1-8)
+│   │   │   ├── Proficiency Requirements (6 Pillars)
+│   │   │   ├── Impact×Autonomy Position
+│   │   │   └── Professional Shape Alignment
+│   │   └── Management Level (First-Line, Middle, Senior)
+│   │
+│   └── Career Transitions
+│       └── Leadership Readiness States
+│
+├── Progression Pillars (6)
+│   ├── Technical Expertise
+│   ├── Problem Solving & Innovation
+│   ├── Communication & Collaboration
+│   ├── Leadership & Influence
+│   ├── Delivery & Execution
+│   └── Learning & Adaptability
+│
+├── Professional Shapes (I, T, Pi)
+│
+└── Implementation Lifecycle (4 Phases)
+    ├── Roles & Responsibilities
+    └── Governance Structure
 ```
 
 ---
 
-### Workflow 2: Promotion Process
+## Key Workflows
 
-```
-Manager Identifies Candidate
-   ↓
-Draft Promotion Proposal
-   ├─ Collect evidence (delivery, feedback, pillar maturity)
-   └─ Align to Ladder expectations
-   ↓
-Peer/Partner Review (validation)
-   ↓
-Calibration Session
-   ├─ Present case
-   ├─ Compare to standards
-   └─ Group discussion
-   ↓
-HR Validation (consistency, equity)
-   ↓
-Leadership Approval (VP/Director)
-   ↓
-[Decision]
-   ├─ Approved → Communicate & Effectuate
-   ├─ Rejected → Provide feedback, set expectations
-   └─ Deferred → Identify gaps, plan follow-up
-```
+### 1. Career Progression Workflow
+**Actors:** Individual Contributor, Manager, HR/People Team
+
+**Steps:**
+1. **Self-Assessment:** IC evaluates proficiency across 6 pillars
+2. **Manager Review:** Manager validates assessment and adds observations
+3. **Level Evaluation:** Compare proficiency against next level requirements
+4. **Gap Identification:** Identify specific pillar gaps
+5. **Development Plan:** Create targeted development activities
+6. **Continuous Feedback:** Regular check-ins on progress
+7. **Promotion Consideration:** Formal evaluation when ready
+8. **Level Transition:** Update title, responsibilities, compensation
+
+**States:**
+- At current level
+- Developing toward next level
+- Ready for promotion review
+- Promoted
+- Progressed to new level
+
+**Visibility:** Progression page (matrix), Leveling page (level definitions)
 
 ---
 
-### Workflow 3: Track Transition (e.g., IC to Manager)
+### 2. Leadership Development Workflow
+**Actors:** IC considering management, Current Manager, Senior Leader, HR
 
-```
-Individual Expresses Interest
-   ↓
-Manager/Track Owner Assessment
-   ├─ Readiness evaluation
-   ├─ Leadership signals
-   └─ Organizational need
-   ↓
-Interim/Trial Period
-   ├─ Shadow or project leadership
-   ├─ Formal training
-   └─ Mentorship
-   ↓
-Evaluation
-   ├─ Effectiveness
-   ├─ Individual satisfaction
-   └─ Team feedback
-   ↓
-[Decision]
-   ├─ Formal Transition → Move to Management Track
-   ├─ Return to IC Track (no stigma)
-   └─ Extended Trial
-```
+**Steps:**
+1. **Interest Expression:** IC expresses management interest
+2. **Initial Assessment:** Evaluate current competencies and gaps
+3. **Decision Point 1:** Does IC meet baseline criteria?
+   - Yes → Proceed to preparation
+   - No → Continue as senior IC or develop further
+4. **Preparation Phase:** Training, shadowing, mentorship (6-12 months)
+5. **Trial Opportunity:** Small team lead or project management
+6. **Performance Evaluation:** Assess effectiveness during trial
+7. **Decision Point 2:** Ready for full management role?
+   - Yes → Promote to First-Line Manager
+   - Partial → Extended development
+   - No → Return to IC track
+8. **Transition Support:** Onboarding as manager with mentor
 
-**Reference**: See "Developing New Leaders" page for detailed leadership readiness flowchart
+**Outcomes:**
+- Promoted to manager
+- Continues as senior IC
+- Needs more development
+
+**Visibility:** Developing Leaders page (interactive flowchart)
 
 ---
 
-### Workflow 4: Framework Implementation (Organizational)
+### 3. Framework Implementation Workflow
+**Actors:** Executive Sponsor, Implementation Team, People/HR Team, Managers, Employees
 
-```
-Phase 1: Design (2-4 months)
-   ├─ Stakeholder interviews
-   ├─ Topology selection
-   ├─ Pillar definition
-   └─ Level mapping
-   ↓
-Phase 2: Pilot (3-6 months)
-   ├─ Select pilot teams
-   ├─ Train managers
-   ├─ Run feedback cycles
-   └─ Iterate on content
-   ↓
-Phase 3: Rollout (6-12 months)
-   ├─ Phased team onboarding
-   ├─ Manager training
-   ├─ System integration
-   └─ Communication plan
-   ↓
-Phase 4: Maintain (Ongoing)
-   ├─ Regular reviews
-   ├─ Feedback collection
-   ├─ Level adjustments
-   └─ Process improvements
-```
+**Steps:**
+1. **Assessment (Weeks 1-4)**
+   - Analyze current career structure
+   - Identify gaps and pain points
+   - Define goals and success metrics
+   
+2. **Design (Weeks 5-12)**
+   - Choose topology model (Y, W, or Network)
+   - Define career levels and criteria
+   - Map proficiency pillars to roles
+   - Create progression guidelines
+   - Design governance structure
+   
+3. **Pilot (Weeks 13-24)**
+   - Select pilot department/team
+   - Train managers and ICs
+   - Apply framework to pilot group
+   - Collect feedback and iterate
+   
+4. **Rollout (Weeks 25-52+)**
+   - Organization-wide training
+   - Apply framework to all roles
+   - Launch supporting tools (leveling guides, progression tracking)
+   - Establish regular calibration cycles
 
----
+**Critical Roles:**
+- Executive Sponsor: Strategic alignment, resources
+- Implementation Lead: Project management, coordination
+- People/HR Team: Policy integration, compensation alignment
+- Department Heads: Change management, feedback
 
-### Workflow 5: Calibration Cycle
-
-```
-Pre-Calibration
-   ├─ Managers prepare cases
-   ├─ Documentation gathered
-   └─ Schedule set
-   ↓
-Calibration Session
-   ├─ Review each candidate
-   ├─ Compare to ladder standards
-   ├─ Discuss evidence
-   ├─ Align on interpretations
-   └─ Make decisions
-   ↓
-Post-Calibration
-   ├─ Document outcomes
-   ├─ Communicate decisions
-   ├─ Update records
-   └─ Provide feedback to individuals
-   ↓
-Follow-up
-   ├─ Track promotion effectiveness
-   └─ Collect feedback on process
-```
+**Visibility:** Framework page (lifecycle), Guidelines page (timeline, roles matrix)
 
 ---
 
-### Workflow 6: Ladder Evolution (Governance)
+### 4. Topology Selection Workflow
+**Actors:** Leadership Team, HR/People Team, Implementation Team
 
-```
-Annual Review Trigger
-   ↓
-Feedback Collection
-   ├─ ICs (surveys, discussions)
-   ├─ Managers (retrospectives)
-   └─ HR (data analysis)
-   ↓
-Track Owner Analysis
-   ├─ Identify gaps/issues
-   ├─ Propose changes
-   └─ Draft updates
-   ↓
-Advisory Group Review
-   ├─ HR representatives
-   ├─ IC representatives
-   ├─ Manager representatives
-   └─ Validate changes
-   ↓
-Leadership Approval
-   ↓
-Communication & Rollout
-   ├─ Version documentation
-   ├─ Training updates
-   └─ Change management
-```
+**Steps:**
+1. **Organization Analysis**
+   - Size and growth stage
+   - Industry and culture
+   - Current career paths
+   
+2. **Model Evaluation**
+   - Review Y, W, Network models
+   - Assess fit for organization
+   - Consider flexibility needs
+   
+3. **Stakeholder Input**
+   - Survey employees
+   - Consult department heads
+   - Review industry benchmarks
+   
+4. **Model Selection**
+   - Choose primary topology
+   - Define adaptation needs
+   - Document rationale
+   
+5. **Communication**
+   - Announce chosen model
+   - Explain benefits and implications
+   - Address concerns
 
----
+**Decision Criteria:**
+- Organizational size
+- Growth trajectory
+- Cultural fit
+- Career flexibility needs
+- Implementation complexity
 
-## Domain States and Transitions
-
-### Individual Career States
-
-```
-Onboarding → Active in Role → Promotion Ready → Promoted
-                    ↓                              ↓
-              Track Transition ←───────────────────┘
-                    ↓
-         (Management/IC/Hybrid)
-```
-
-### Ladder Lifecycle States
-
-```
-Draft → Pilot → Active → Under Review → Updated
-                   ↓                         ↓
-                Deprecated ←─────────────────┘
-```
-
-### Promotion Request States
-
-```
-Drafted → Peer Reviewed → In Calibration → HR Validated → Leadership Review
-                                                ↓
-                                    [Approved / Rejected / Deferred]
-```
+**Visibility:** Topologies page (comparative table, model descriptions)
 
 ---
 
-## Key Domain Concepts and Terminology
+## Key Metrics and Measurements
 
-### Governance Terms
+### Proficiency Metrics (from Progression Pillars)
+- **Proficiency Score:** 1-5 scale per pillar
+- **Overall Proficiency:** Average or weighted score across 6 pillars
+- **Gap Analysis:** Distance from next level requirements
+- **Growth Trajectory:** Change in proficiency over time
 
-- **Track Owner**: Person responsible for track evolution
-- **Advisory Group**: Cross-functional team guiding framework evolution
-- **Calibration**: Alignment session for consistent evaluation
-
-### Evaluation Terms
-
-- **Progression Pillar**: Competency dimension
-- **Maturity Level**: Proficiency on a pillar (1-5 scale)
-- **Sustained Performance**: Consistent demonstration over time
-- **Promotion Readiness**: Meeting criteria for next level
-
-### Structural Terms
-
-- **Career Topology**: Overall path structure (Y/W/Network)
-- **Career Track**: Specific path within topology (IC/Management/Hybrid)
-- **Career Level**: Stage within a track (Junior → C-Level)
-- **Career Ladder**: Complete framework document
-
-### Profile Terms
-
-- **Professional Shape**: Skill profile (I/T/Pi)
-- **Scope of Impact**: Who/what the role affects
-- **Degree of Autonomy**: Independence level
-- **Planning Horizon**: Time range of focus (short/mid/long-term)
-
-### Process Terms
-
-- **IDP (Individual Development Plan)**: Personalized growth roadmap
-- **Feedback Cycle**: Regular performance evaluation period
-- **Promotion Window**: Designated timeframe for advancement reviews
-- **Interim Period**: Trial phase before formal role change
+**Visualization:** Proficiency Radar Chart (Progression page)
 
 ---
 
-## Summary
+### Impact×Autonomy Positioning (from Leveling)
+- **Impact Dimension:** Individual → Team → Dept → Org → Ecosystem
+- **Autonomy Dimension:** Guided → Independent → Leading → Defining
+- **Level Mapping:** Each career level has typical position
 
-The Career Topologies domain is rich with interconnected entities spanning:
+**Visualization:** Impact×Autonomy Matrix scatter plot (Leveling page)
 
-1. **Structural Elements**: Topologies, Tracks, Levels, Ladders
-2. **Evaluation Mechanisms**: Progression Pillars, Shapes, Maturity Scores
-3. **People and Roles**: Individuals, Managers, Track Owners, HR
-4. **Processes**: Promotions, Calibrations, Feedback Cycles, IDPs
-5. **Governance**: Advisory Groups, Review Cycles, Version Control
+---
 
-The domain emphasizes **transparency, fairness, and structure** while maintaining **flexibility and individual agency**. Workflows are well-defined but adaptable, supporting diverse organizational contexts and career aspirations.
+### Framework Adoption Metrics (implied from Implementation)
+- **Phase Completion:** % progress through implementation lifecycle
+- **Coverage:** % of roles mapped to framework
+- **Calibration Consistency:** Agreement rates in level assessments
+- **Promotion Cycle:** Time from readiness to promotion
+- **Retention:** Career satisfaction and retention rates
+
+**Visualization:** Implementation Timeline Gantt chart (Guidelines page)
+
+---
+
+### Leadership Pipeline Metrics (from Leadership Development)
+- **Readiness Stage:** Assessment → Preparation → Transition → Consolidation
+- **Pipeline Health:** Number of ICs in each readiness stage
+- **Success Rate:** % successfully transitioning to management
+- **Time to Readiness:** Average time in preparation phase
+
+**Visualization:** Leadership Readiness Flowchart (Developing Leaders page)
+
+---
+
+## Domain Vocabulary (Glossary)
+
+| Term | Definition | Primary Source |
+|------|------------|----------------|
+| **Career Level** | Hierarchical position indicating scope, autonomy, and impact | Leveling page |
+| **Career Topology** | Structural model defining career paths (Y, W, Network) | Topologies page |
+| **Progression Pillar** | Core competency dimension (6 total) for professional development | Progression page |
+| **Professional Shape** | Skill profile (I, T, Pi) characterizing breadth vs depth | Shapes page |
+| **Individual Contributor (IC)** | Non-management professional role | Throughout |
+| **Management Track** | Career path for people managers | Management page |
+| **Technical Lead Track** | Hybrid role with technical depth and leadership (W-model) | Topologies page |
+| **Impact×Autonomy Matrix** | 2D framework for positioning career levels | Leveling page |
+| **Proficiency Score** | 1-5 rating on a progression pillar | Progression page |
+| **Leadership Readiness** | State of preparedness for management transition | Developing Leaders page |
+| **Framework Governance** | Structure for maintaining and evolving the framework | Framework page |
+| **Implementation Lifecycle** | 4-phase process for adopting the framework | Framework page, Guidelines page |
+| **Calibration** | Process of ensuring consistent level assessments | Guidelines page |
+| **Promotion Cycle** | Regular evaluation period for level progression | Leveling page |
+| **Career Transition** | Movement between tracks (IC ↔ Manager) | Topologies page |
+| **Skill Breadth** | Range of domains with competence | Shapes page |
+| **Skill Depth** | Level of expertise within a domain | Shapes page |
+| **First-Line Manager** | Manager of individual contributors | Management page |
+| **Middle Manager** | Manager of managers | Management page |
+| **Senior Leader** | Strategic leader of departments/divisions | Management page |
+
+---
+
+## Data Structures Visible in UI
+
+### 1. Leveling Table (Interactive)
+**Columns:**
+- Level Number
+- Level Name
+- Track Type
+- Impact Dimension
+- Autonomy Level
+- Key Responsibilities
+- Example Roles
+
+**Rows:** 8-10 career levels (varies by track)
+
+**Interactions:** Click to expand level details
+
+---
+
+### 2. Proficiency Radar Chart
+**Axes:** 6 progression pillars
+**Data Points:** Proficiency scores (1-5) per pillar
+**Variants:** Separate charts for each career level
+**Interactions:** Tab between levels to see different proficiency profiles
+
+---
+
+### 3. Progression Matrix (Heat Map)
+**Rows:** Career levels (1-8)
+**Columns:** 6 progression pillars
+**Cells:** Expected proficiency score (1-5), color-coded
+**Interaction:** Hover to see detailed expectations
+
+---
+
+### 4. Impact×Autonomy Matrix (Scatter Plot)
+**X-Axis:** Autonomy (Guided → Defining)
+**Y-Axis:** Impact (Individual → Ecosystem)
+**Data Points:** Career levels positioned by typical impact/autonomy
+**Interaction:** Hover to see level name and description
+
+---
+
+### 5. Topology Comparative Table
+**Columns:** Aspect (Tracks, Flexibility, Best For, Transitions)
+**Rows:** Y-Model, W-Model, Network Model
+**Cells:** Descriptive text comparing models
+
+---
+
+### 6. Roles & Responsibilities Matrix
+**Rows:** Framework roles (Exec Sponsor, Implementation Lead, People Team, Dept Heads, Managers)
+**Columns:** Responsibilities during implementation
+**Cells:** Specific duties and expectations
+
+---
+
+### 7. Implementation Timeline (Gantt Chart)
+**Rows:** 8 major activities
+**Timeline:** Week 0 → Week 52+
+**Bars:** Duration and sequence of activities
+**Labels:** Phase names (Assessment, Design, Pilot, Rollout)
+
+---
+
+### 8. Leadership Readiness Flowchart
+**Nodes:**
+- Start: IC expresses interest
+- Decision 1: Meets criteria?
+- Process: Preparation phase
+- Decision 2: Ready for role?
+- End States: Promoted / Continue as IC / More development
+
+**Edges:** Paths between states with conditions
+
+**Interactions:** Hover tooltips with details
+
+---
+
+## Conceptual Model Summary
+
+The Career Topologies framework is built on these interconnected concepts:
+
+1. **Structural Foundation:** Choose a topology (Y, W, Network) that defines available career tracks
+2. **Level Framework:** Define career levels with clear impact/autonomy expectations
+3. **Competency Model:** Map 6 progression pillars to each level
+4. **Skill Profiles:** Encourage professional shapes (I, T, Pi) aligned to organizational needs
+5. **Transition Mechanisms:** Support career movements (promotions, lateral moves, IC↔Manager)
+6. **Implementation System:** Provide governance, roles, and lifecycle for adoption
+7. **Continuous Evolution:** Enable calibration, feedback, and framework improvements
+
+**Philosophy:** Transparent, fair, evidence-based career development that recognizes multiple paths to growth and impact.
+
+---
+
+## Entity Coverage Notes
+
+- **All primary entities documented:** Career Level, Progression Pillar, Topology, Shape, Management Level, Readiness State, Framework Component, Implementation Phase
+- **Attributes extracted from:** Interactive tables, charts, diagrams, and descriptive text across 14 pages
+- **Workflows reconstructed:** From user journeys, flowcharts, timelines, and process descriptions
+- **Metrics identified:** Proficiency scores, impact/autonomy positioning, adoption progress, leadership pipeline health
+- **No database schema:** Framework is documentation/guidance, not a CRUD application
+- **Data primarily conceptual:** Framework defines models, not transactional data
+
+---

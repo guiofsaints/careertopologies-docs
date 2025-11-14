@@ -1,723 +1,559 @@
-# Documentation Structure Proposal
+# Proposed Documentation Structure
 
 ## Overview
 
-This document proposes a comprehensive documentation structure for Career Topologies, organized around the product's purpose and content rather than its technical implementation. The structure is designed to serve multiple audiences (business, product, and technical) while maintaining clarity and accessibility.
+This document proposes a comprehensive documentation structure for the Career Topologies project, **focused on product purpose and user-facing content** rather than technical implementation. The structure is designed to serve the four primary audiences: Technology Leaders, HR/People Teams, Engineering Managers, and Individual Contributors.
+
+---
+
+## Documentation Philosophy
+
+**Content-First Approach:**
+- Focus on **what the framework is and how to use it**, not how it's coded
+- Organize by **user needs and journeys**, not technical architecture
+- Prioritize **actionable guidance** over theoretical concepts
+- Provide **multiple entry points** for different audiences and use cases
+
+**Audience-Centric Structure:**
+- Technology Leaders → Strategic value, ROI, adoption case studies
+- HR/People Teams → Implementation guides, governance, policy integration
+- Engineering Managers → Practical tools for career conversations and assessments
+- Individual Contributors → Career path clarity, growth opportunities, self-assessment
 
 ---
 
 ## Proposed Documentation Sections
 
-### Section 1: Product Overview
+### 1. Overview & Introduction
+**Audience:** All users, especially first-time visitors  
+**Purpose:** Introduce the framework, its value proposition, and guide exploration
 
-#### 1.1 Executive Summary
+**Proposed Documents:**
+- **1.1 What is Career Topologies?**
+  - Brief explanation of the framework
+  - Key benefits: transparency, fairness, flexibility
+  - Quick visual: Y/W/Network models at a glance
+  - Who should use this framework?
+  
+- **1.2 Getting Started**
+  - "I'm new to career frameworks" → Start here
+  - "I'm evaluating frameworks" → See Use Cases
+  - "I'm implementing a framework" → Jump to Implementation Guide
+  - "I need a specific tool" → Browse Screens/Flows
+  
+- **1.3 Framework Philosophy (Career Manifesto)**
+  - 8 foundational principles
+  - Why transparency matters
+  - Research foundation (link to References)
+  
+- **1.4 Core Concepts Glossary**
+  - Career Level, Topology, Progression Pillar, Shape, etc.
+  - Short definitions with links to deep-dives
 
-**Title**: Career Topologies at a Glance  
-**Description**: One-page overview covering what Career Topologies is, the problem it solves, who it serves, and key differentiators.  
-**Audience**: Business leaders, executives, decision-makers  
-**Length**: 2-3 pages  
-**Key Topics**:
-
-- Elevator pitch
-- Core value proposition
-- Target market and users
-- High-level benefits
-- Version and maturity status
-
----
-
-#### 1.2 Problem Statement and Solution
-
-**Title**: Why Career Topologies Exists  
-**Description**: Detailed exploration of the industry challenges in career development and how Career Topologies addresses them.  
-**Audience**: Business stakeholders, HR leaders, organizational development  
-**Length**: 4-6 pages  
-**Key Topics**:
-
-- Career development challenges in tech
-- Impact of poor career systems (retention, equity, morale)
-- How structured frameworks solve these problems
-- Success metrics and expected outcomes
-- Industry context and trends
+**Current Coverage:** Partially exists (Home, About, Manifesto, Concepts pages)  
+**Recommendation:** Add dedicated "Getting Started" guide consolidating entry points
 
 ---
 
-#### 1.3 The Career Topologies Manifesto
+### 2. Use Cases & User Journeys
+**Audience:** All users seeking role-specific guidance  
+**Purpose:** Show how different users interact with the framework
 
-**Title**: Principles and Values  
-**Description**: Deep dive into the 8 principles that guide the framework, with context and rationale.  
-**Audience**: All stakeholders, especially culture and values-focused leaders  
-**Length**: 5-8 pages  
-**Key Topics**:
+**Proposed Documents:**
+- **2.1 For Technology Leaders**
+  - Evaluating the framework for adoption
+  - Building the business case
+  - Measuring ROI and success metrics
+  - Example: "Skeptical Stakeholder" journey
+  
+- **2.2 For HR/People Teams**
+  - Designing career systems
+  - Integrating with compensation
+  - Managing promotion cycles
+  - Example: "Implementing Framework" journey
+  
+- **2.3 For Engineering Managers**
+  - Conducting career conversations
+  - Assessing readiness for promotion
+  - Developing leadership pipeline
+  - Example: "Career Development Conversation" journey
+  
+- **2.4 For Individual Contributors**
+  - Understanding career paths
+  - Self-assessing proficiency
+  - Planning skill development
+  - Example: "Exploring Framework" journey
 
-- The 8 principles explained in depth
-- Origin of each principle
-- Real-world implications
-- How principles manifest in the framework
-- Balancing competing principles
-
----
-
-### Section 2: Core Concepts and Terminology
-
-#### 2.1 Glossary of Terms
-
-**Title**: Career Topologies Terminology  
-**Description**: Comprehensive definitions of all domain-specific terms used throughout the framework.  
-**Audience**: All users, especially newcomers  
-**Length**: 8-12 pages  
-**Key Topics**:
-
-- Alphabetical term list
-- Cross-references
-- Etymology and origin notes
-- Common misconceptions
-- Related terms
-
----
-
-#### 2.2 Conceptual Model
-
-**Title**: Understanding the Career Topologies Model  
-**Description**: Explanation of how all framework components fit together into a cohesive system.  
-**Audience**: Product managers, HR strategists, architects  
-**Length**: 6-10 pages  
-**Key Topics**:
-
-- System diagram and relationships
-- The four pillars (Leveling, Progression, Topologies, Governance)
-- How components interact
-- Conceptual foundations
-- Design decisions and trade-offs
+**Current Coverage:** Journeys inferred in `information-architecture.md`  
+**Recommendation:** Create dedicated use case pages with step-by-step walkthroughs
 
 ---
 
-#### 2.3 Career Topologies: Y, W, and Network Models
+### 3. Framework Components (Domain Model)
+**Audience:** All users needing deep understanding of framework elements  
+**Purpose:** Explain the "what" and "why" of each framework component
 
-**Title**: Understanding Career Path Structures  
-**Description**: Detailed comparison and guidance for choosing between topology models.  
-**Audience**: Organizational designers, HR strategists, leadership  
-**Length**: 10-15 pages  
-**Key Topics**:
+**Proposed Documents:**
+- **3.1 Career Topologies (Y, W, Network)**
+  - What are topologies?
+  - Comparison of three models
+  - How to choose the right topology
+  - Visual: Topology diagrams and comparative table
+  
+- **3.2 Career Levels & Leveling**
+  - What are career levels?
+  - Impact × Autonomy framework
+  - How levels differ across topologies
+  - Visual: Leveling table, Impact×Autonomy Matrix
+  
+- **3.3 Progression Pillars (Competency Model)**
+  - 6 pillars explained
+  - Proficiency scales (1-5)
+  - How pillars map to levels
+  - Visual: Proficiency Radar Chart, Progression Matrix
+  
+- **3.4 Professional Shapes (I, T, Pi)**
+  - Skill breadth vs. depth
+  - How shapes align to roles
+  - Developing from I → T → Pi
+  
+- **3.5 Management Levels & Tracks**
+  - First-Line, Middle, Senior leaders
+  - Responsibilities by level
+  - Management vs. IC tracks
+  
+- **3.6 Leadership Development Process**
+  - Assessing readiness for management
+  - Preparation and support
+  - Decision framework
+  - Visual: Leadership Readiness Flowchart
 
-- Y-Model: Structure, use cases, pros/cons, examples
-- W-Model: Structure, use cases, pros/cons, examples
-- Network Model: Structure, use cases, pros/cons, examples
-- Comparative analysis matrix
-- Decision framework for selection
-- Hybrid and custom approaches
-- Evolution between models
-
----
-
-#### 2.4 Professional Shapes and Skill Profiles
-
-**Title**: I, T, and Pi-Shaped Professionals  
-**Description**: Understanding skill diversity and its implications for hiring, development, and team composition.  
-**Audience**: Hiring managers, team leads, career coaches  
-**Length**: 6-8 pages  
-**Key Topics**:
-
-- Shape definitions and characteristics
-- Organizational context for each shape
-- Team composition strategies
-- Development pathways between shapes
-- Avoiding shape stereotypes
-- Real-world examples
-
----
-
-### Section 3: User Journeys and Use Cases
-
-#### 3.1 The Individual Contributor Journey
-
-**Title**: Navigating Your Career with Career Topologies  
-**Description**: Step-by-step guide for individuals using the framework to understand their growth path.  
-**Audience**: Individual contributors (all levels)  
-**Length**: 8-10 pages  
-**Key Topics**:
-
-- Onboarding and learning the framework
-- Self-assessment using progression pillars
-- Setting career goals
-- Having career conversations
-- Creating personal development plans
-- Preparing for promotion
-- Transitioning between tracks
+**Current Coverage:** ✅ Fully documented (Topologies, Leveling, Progression, Shapes, Management, Developing Leaders pages)  
+**Recommendation:** No changes needed; current structure is effective
 
 ---
 
-#### 3.2 The Manager Journey
+### 4. Implementation Guide
+**Audience:** HR/People Teams, Technology Leaders, Implementation Teams  
+**Purpose:** Provide step-by-step guidance for adopting the framework
 
-**Title**: Leading with Career Topologies  
-**Description**: Guide for managers on using the framework in people management, feedback, and development.  
-**Audience**: Front-line and middle managers  
-**Length**: 10-12 pages  
-**Key Topics**:
+**Proposed Documents:**
+- **4.1 Framework Overview**
+  - Four core components
+  - Modular approach (choose what you need)
+  - Governance structure
+  
+- **4.2 Implementation Lifecycle**
+  - Phase 1: Assessment (Weeks 1-4)
+  - Phase 2: Design (Weeks 5-12)
+  - Phase 3: Pilot (Weeks 13-24)
+  - Phase 4: Rollout (Weeks 25-52+)
+  - Visual: Implementation Timeline (Gantt chart)
+  
+- **4.3 Roles & Responsibilities**
+  - Executive Sponsor
+  - Implementation Lead
+  - People/HR Team
+  - Department Heads
+  - Managers
+  - Visual: Roles & Responsibilities Matrix
+  
+- **4.4 Process Workflows**
+  - Promotion cycle workflow
+  - Calibration process
+  - Career conversation cadence
+  - Visual: Framework Flow Diagram
+  
+- **4.5 Common Pitfalls & Solutions**
+  - "Our levels don't match the framework" → Customization guidance
+  - "Managers resist transparency" → Change management strategies
+  - "Compensation alignment is hard" → Integration tips
 
-- Applying the framework in 1:1s
-- Giving structured feedback using pillars
-- Evaluating progression readiness
-- Writing promotion proposals
-- Participating in calibration
-- Supporting diverse career aspirations
-- Coaching through transitions
-
----
-
-#### 3.3 The HR / People Ops Journey
-
-**Title**: Implementing and Operating Career Topologies  
-**Description**: Comprehensive guide for HR teams implementing, maintaining, and governing the framework.  
-**Audience**: HR professionals, people operations teams  
-**Length**: 15-20 pages  
-**Key Topics**:
-
-- Initial assessment and planning
-- Topology selection for your organization
-- Customizing levels and pillars
-- Phased rollout strategy
-- Training managers and employees
-- Integration with performance systems
-- Compensation alignment
-- Compliance and documentation
-- Ongoing governance and evolution
-
----
-
-#### 3.4 The Track Owner Journey
-
-**Title**: Owning and Evolving a Career Track  
-**Description**: Guide for individuals responsible for defining and maintaining career tracks.  
-**Audience**: Track owners, discipline leads  
-**Length**: 8-10 pages  
-**Key Topics**:
-
-- Defining track-specific pillars and levels
-- Facilitating calibration sessions
-- Gathering feedback from stakeholders
-- Iterating on track definition
-- Supporting managers
-- Version control and communication
-- Measuring track effectiveness
+**Current Coverage:** ✅ Fully documented (Framework, Guidelines pages)  
+**Recommendation:** Extract common pitfalls into dedicated troubleshooting section
 
 ---
 
-### Section 4: Framework Components Deep-Dive
+### 5. Practical Tools & Screens
+**Audience:** Engineering Managers, Individual Contributors  
+**Purpose:** Provide interactive tools and templates for daily use
 
-#### 4.1 Leveling System
+**Proposed Documents:**
+- **5.1 Interactive Leveling Table**
+  - Expandable table with level details
+  - Use: "What level am I?" or "What's expected at the next level?"
+  
+- **5.2 Proficiency Assessment (Radar Chart)**
+  - Self-assessment tool for 6 pillars
+  - Compare your profile to level expectations
+  - Use: Career conversation prep
+  
+- **5.3 Impact × Autonomy Matrix**
+  - Visualize level positioning
+  - Understand growth dimensions
+  - Use: "Where am I and where am I going?"
+  
+- **5.4 Leadership Readiness Self-Assessment**
+  - Flowchart tool for IC→Manager transition
+  - Decision support: Am I ready?
+  - Use: Career path planning
+  
+- **5.5 Career Development Worksheet** (Future)
+  - Gap analysis template
+  - Action plan builder
+  - Progress tracker
 
-**Title**: Designing and Using Career Levels  
-**Description**: Comprehensive guide to career leveling, including design principles, examples, and alignment.  
-**Audience**: HR, track owners, managers  
-**Length**: 12-15 pages  
-**Key Topics**:
-
-- Leveling philosophy and objectives
-- Typical level progression (Junior → C-Level)
-- Scope, autonomy, and complexity dimensions
-- Crafting level descriptions
-- Impact × Autonomy matrix
-- Alignment with topologies
-- Common pitfalls and anti-patterns
-- Examples across different tracks
-
----
-
-#### 4.2 Progression Pillars
-
-**Title**: Defining and Evaluating Competencies  
-**Description**: Guide to creating, adapting, and using progression pillars for evaluation and development.  
-**Audience**: HR, track owners, managers  
-**Length**: 12-15 pages  
-**Key Topics**:
-
-- Purpose of progression pillars
-- Standard pillar framework (6 core pillars)
-- Maturity scales (1-5 proficiency)
-- Customizing pillars by discipline
-- Writing pillar descriptions and examples
-- Using pillars in feedback and IDPs
-- Visual tools (radar charts, matrices)
-- Avoiding misuse and gaming
+**Current Coverage:** Tools exist on Leveling, Progression, Developing Leaders pages  
+**Recommendation:** Consider consolidating tools into a "Career Toolkit" section for easy access
 
 ---
 
-#### 4.3 Governance and Roles
+### 6. Visual Dashboards & Data Models
+**Audience:** All users, especially visual learners  
+**Purpose:** Provide at-a-glance understanding through diagrams and charts
 
-**Title**: Who Does What in Career Topologies  
-**Description**: Clarification of roles, responsibilities, and decision-making in framework implementation and operation.  
-**Audience**: HR, leadership, all stakeholders  
-**Length**: 8-10 pages  
-**Key Topics**:
+**Proposed Documents:**
+- **6.1 Topology Model Diagrams**
+  - Y-Model visual
+  - W-Model visual
+  - Network Model visual
+  - Use: Quick topology comparison
+  
+- **6.2 Framework Architecture Diagram**
+  - How components fit together
+  - Entry points for different users
+  - Use: Big picture understanding
+  
+- **6.3 Career Progression Heat Map** (Progression Matrix)
+  - Level × Pillar proficiency expectations
+  - Color-coded for easy scanning
+  - Use: Quick reference for managers
+  
+- **6.4 Implementation Timeline** (Gantt Chart)
+  - 8-phase rollout visualization
+  - Milestone tracking
+  - Use: Project planning
+  
+- **6.5 User Journey Maps** (New)
+  - Visual flowcharts for key journeys
+  - Decision points and paths
+  - Use: Understanding framework workflows
 
-- Roles matrix (HR, managers, ICs, track owners, leadership)
-- Governance structures (advisory groups, review cycles)
-- Decision-making authority
-- Escalation paths
-- Accountability and transparency
-- Resolving conflicts
-- Evolution and change management
-
----
-
-#### 4.4 The Promotion Process
-
-**Title**: How Promotions Work with Career Topologies  
-**Description**: End-to-end process for proposing, reviewing, and approving career advancement.  
-**Audience**: Managers, HR, leadership  
-**Length**: 10-12 pages  
-**Key Topics**:
-
-- Promotion philosophy and principles
-- Proposal requirements and documentation
-- Review stages (peer, calibration, HR, leadership)
-- Timeline and windows
-- Communication (approved, rejected, deferred)
-- Appeals and reconsideration
-- Post-promotion follow-up
-- Common mistakes and how to avoid them
-
----
-
-#### 4.5 Calibration Process
-
-**Title**: Ensuring Consistent Evaluations  
-**Description**: Guide to running effective calibration sessions that align standards and reduce bias.  
-**Audience**: Managers, track owners, HR  
-**Length**: 8-10 pages  
-**Key Topics**:
-
-- Purpose and benefits of calibration
-- Preparation (documentation, cases)
-- Facilitation techniques
-- Using the ladder as reference
-- Handling disagreements
-- Documentation and follow-up
-- Frequency and participants
-- Measuring calibration effectiveness
+**Current Coverage:** Diagrams exist across multiple pages  
+**Recommendation:** Create "Visual Library" page aggregating all diagrams with context
 
 ---
 
-### Section 5: Specialized Topics
+### 7. References & Evidence Base
+**Audience:** Skeptical stakeholders, researchers, evidence-seekers  
+**Purpose:** Demonstrate framework credibility through research citations
 
-#### 5.1 Management Levels Framework
+**Proposed Documents:**
+- **7.1 Academic References**
+  - Journals, research papers
+  - Career development theory
+  
+- **7.2 Industry Best Practices**
+  - Tech company examples (Google, Netflix, Medium)
+  - HR thought leadership
+  
+- **7.3 Career Development Resources**
+  - Tools (levels.fyi, roadmap.sh)
+  - Blogs and communities
+  
+- **7.4 Management & Leadership**
+  - Harvard Business Review, BBC, etc.
+  - Leadership development research
 
-**Title**: Three Layers of Management  
-**Description**: Understanding the distinct responsibilities, skills, and contexts for operational, tactical, and strategic management.  
-**Audience**: Current and aspiring managers, leadership  
-**Length**: 10-12 pages  
-**Key Topics**:
-
-- Front-line management (operational)
-- Middle management (tactical)
-- Top management (strategic)
-- Shared responsibilities across all managers
-- Recommended knowledge and skills by layer
-- Small company adaptations
-- Distributed leadership models (future)
-
----
-
-#### 5.2 Developing New Leaders
-
-**Title**: Pathway to First-Time Management  
-**Description**: Structured process for identifying, preparing, and transitioning individuals into leadership roles.  
-**Audience**: HR, managers, aspiring leaders  
-**Length**: 8-10 pages  
-**Key Topics**:
-
-- Identification criteria (readiness signals)
-- Preparation phase (training, shadowing)
-- Interim/trial period
-- Evaluation framework
-- Formal transition or return to IC
-- Psychological safety and agency
-- Common pitfalls (premature promotion)
-- Success metrics
+**Current Coverage:** ✅ Fully documented (References page with 28 links in 5 categories)  
+**Recommendation:** No changes needed
 
 ---
 
-#### 5.3 Track Transitions and Career Changes
+### 8. Community & Contribution
+**Audience:** Contributors, adopters seeking support, community builders  
+**Purpose:** Facilitate engagement and continuous improvement
 
-**Title**: Moving Between Career Paths  
-**Description**: Guide to navigating transitions between IC, management, and hybrid tracks.  
-**Audience**: Individuals, managers, HR  
-**Length**: 6-8 pages  
-**Key Topics**:
+**Proposed Documents:**
+- **8.1 Contributing Guide**
+  - 5 ways to contribute
+  - GitHub workflow
+  - Code of conduct
+  
+- **8.2 Adoption Stories** (Future)
+  - Case studies from organizations
+  - Lessons learned
+  - Adaptation examples
+  
+- **8.3 Community Discussions**
+  - GitHub Discussions link
+  - Common questions and answers
+  - Feature requests
+  
+- **8.4 Roadmap & Updates** (Future)
+  - Planned enhancements
+  - Version history
+  - Changelog
 
-- When and why to transition
-- IC → Management pathway
-- Management → IC pathway
-- IC → Hybrid technical leadership
-- Readiness assessment
-- Trial periods and experiments
-- Supporting reversible decisions
-- Cultural aspects and stigma
-
----
-
-#### 5.4 Compensation and Career Frameworks
-
-**Title**: Aligning Pay with Career Levels  
-**Description**: Guidance on integrating compensation structures with career leveling for equity and competitiveness.  
-**Audience**: HR, compensation teams, leadership  
-**Length**: 8-10 pages  
-**Key Topics**:
-
-- Mapping levels to compensation bands
-- Internal equity vs market competitiveness
-- Salary range design
-- Promotion and compensation timing
-- Pay transparency considerations
-- Title vs level (internal/external)
-- Addressing pay gaps
-- Legal and compliance considerations
+**Current Coverage:** Contributing page exists; community features are GitHub-based  
+**Recommendation:** Add case studies and adoption stories when available
 
 ---
 
-### Section 6: Implementation and Operations
+### 9. Appendix
+**Audience:** Power users, customizers  
+**Purpose:** Deep reference material and advanced topics
 
-#### 6.1 Implementation Playbook
+**Proposed Documents:**
+- **9.1 Complete Glossary**
+  - All domain terms with definitions
+  - Cross-references
+  
+- **9.2 FAQ**
+  - Common questions by audience
+  - Troubleshooting tips
+  
+- **9.3 Customization Guide**
+  - How to adapt framework to your org
+  - What to keep vs. modify
+  - Examples of adaptations
+  
+- **9.4 Related Frameworks**
+  - How Career Topologies compares
+  - Complementary systems (OKRs, performance reviews)
 
-**Title**: Rolling Out Career Topologies  
-**Description**: Comprehensive guide from design through launch and maintenance, with timelines and milestones.  
-**Audience**: HR, leadership, project managers  
-**Length**: 20-25 pages  
-**Key Topics**:
-
-- Phase 1: Design (2-4 months)
-  - Stakeholder engagement
-  - Topology selection
-  - Level and pillar definition
-- Phase 2: Pilot (3-6 months)
-  - Pilot team selection
-  - Manager training
-  - Feedback and iteration
-- Phase 3: Rollout (6-12 months)
-  - Communication strategy
-  - Organization-wide training
-  - System integration
-- Phase 4: Maintain (ongoing)
-  - Governance cycles
-  - Evolution process
-  - Measurement and optimization
+**Current Coverage:** Glossary concepts embedded in Concepts page; FAQ not formalized  
+**Recommendation:** Create dedicated FAQ and Customization Guide pages
 
 ---
 
-#### 6.2 Communication Best Practices
+## Proposed Information Architecture (Content-Focused)
 
-**Title**: Talking About Career Topologies  
-**Description**: Guidelines for effectively communicating the framework to diverse audiences.  
-**Audience**: HR, managers, internal communications  
-**Length**: 6-8 pages  
-**Key Topics**:
-
-- Launch communication strategy
-- Messaging by audience (ICs, managers, leadership)
-- Using framework language in feedback
-- Career conversations templates
-- Addressing concerns and resistance
-- Reinforcing over time
-- Visual and storytelling approaches
-
----
-
-#### 6.3 Training and Enablement
-
-**Title**: Learning Career Topologies  
-**Description**: Training curriculum and materials for different stakeholder groups.  
-**Audience**: HR, learning & development, managers  
-**Length**: 8-10 pages  
-**Key Topics**:
-
-- Training needs by role
-- Manager training program
-- Individual onboarding
-- Track owner deep-dive
-- Refresher and advanced topics
-- Assessment and certification (optional)
-- Creating internal resources
-- Train-the-trainer approach
-
----
-
-#### 6.4 Tools and Templates
-
-**Title**: Practical Resources for Career Topologies  
-**Description**: Collection of templates, checklists, and tools to support framework usage.  
-**Audience**: All users  
-**Length**: 10-15 pages (mostly templates)  
-**Key Topics**:
-
-- Level description template
-- Pillar definition template
-- Promotion proposal template
-- IDP template
-- Calibration agenda and notes template
-- Feedback conversation guide
-- Self-assessment worksheet
-- Track evolution checklist
-
----
-
-### Section 7: Organizational Context
-
-#### 7.1 Adapting to Organizational Size
-
-**Title**: Career Topologies for Different Scales  
-**Description**: Guidance on adapting the framework for startups, growth companies, and large enterprises.  
-**Audience**: Leadership, HR, organizational development  
-**Length**: 8-10 pages  
-**Key Topics**:
-
-- Startup (10-50 people)
-- Growth-stage (50-500 people)
-- Large enterprise (500+ people)
-- Complexity vs simplicity trade-offs
-- When to adopt different topologies
-- Scaling governance models
+```
+Career Topologies Documentation
+│
+├── 1. Overview & Introduction
+│   ├── What is Career Topologies?
+│   ├── Getting Started
+│   ├── Framework Philosophy (Manifesto)
+│   └── Core Concepts Glossary
+│
+├── 2. Use Cases & User Journeys
+│   ├── For Technology Leaders
+│   ├── For HR/People Teams
+│   ├── For Engineering Managers
+│   └── For Individual Contributors
+│
+├── 3. Framework Components
+│   ├── Career Topologies (Y, W, Network)
+│   ├── Career Levels & Leveling
+│   ├── Progression Pillars
+│   ├── Professional Shapes
+│   ├── Management Levels & Tracks
+│   └── Leadership Development Process
+│
+├── 4. Implementation Guide
+│   ├── Framework Overview
+│   ├── Implementation Lifecycle
+│   ├── Roles & Responsibilities
+│   ├── Process Workflows
+│   └── Common Pitfalls & Solutions
+│
+├── 5. Practical Tools & Screens
+│   ├── Interactive Leveling Table
+│   ├── Proficiency Assessment (Radar Chart)
+│   ├── Impact × Autonomy Matrix
+│   ├── Leadership Readiness Self-Assessment
+│   └── Career Development Worksheet [Future]
+│
+├── 6. Visual Dashboards
+│   ├── Topology Model Diagrams
+│   ├── Framework Architecture Diagram
+│   ├── Career Progression Heat Map
+│   ├── Implementation Timeline
+│   └── User Journey Maps [New]
+│
+├── 7. References & Evidence Base
+│   ├── Academic References
+│   ├── Industry Best Practices
+│   ├── Career Development Resources
+│   └── Management & Leadership
+│
+├── 8. Community & Contribution
+│   ├── Contributing Guide
+│   ├── Adoption Stories [Future]
+│   ├── Community Discussions
+│   └── Roadmap & Updates [Future]
+│
+└── 9. Appendix
+    ├── Complete Glossary
+    ├── FAQ
+    ├── Customization Guide
+    └── Related Frameworks
+```
 
 ---
 
-#### 7.2 Cultural Fit and Adaptation
+## Mapping Current Site to Proposed Structure
 
-**Title**: Aligning Career Topologies with Your Culture  
-**Description**: How to ensure the framework reflects and reinforces organizational values and culture.  
-**Audience**: Leadership, HR, culture teams  
-**Length**: 6-8 pages  
-**Key Topics**:
+| Current Page | Maps to Proposed Section | Gap Analysis |
+|--------------|--------------------------|--------------|
+| Home (/) | 1.2 Getting Started | ✅ Good match; could add more explicit "start here" guidance |
+| About (/about) | 1.1 What is Career Topologies? | ✅ Comprehensive overview; no changes needed |
+| Framework (/framework) | 4.1 Framework Overview, 4.2 Implementation Lifecycle | ✅ Good coverage; consider extracting pitfalls |
+| Leveling (/framework/leveling) | 3.2 Career Levels, 5.1 Interactive Leveling Table | ✅ Excellent; interactive tools well-integrated |
+| Progression (/framework/progression) | 3.3 Progression Pillars, 5.2 Proficiency Assessment | ✅ Excellent; charts make concepts tangible |
+| Guidelines (/framework/guidelines) | 4.3 Roles, 4.4 Workflows, 5.4 Timeline | ✅ Comprehensive implementation guidance |
+| Topologies (/topologies) | 3.1 Career Topologies | ✅ Clear explanations with visuals; no changes needed |
+| Concepts (/concepts) | 1.4 Core Concepts Glossary | ✅ Good foundation; could expand into full glossary (9.1) |
+| Manifesto (/manifesto) | 1.3 Framework Philosophy | ✅ Compelling principles; no changes needed |
+| Shapes (/shapes) | 3.4 Professional Shapes | ✅ Clear explanations; no changes needed |
+| Management (/management) | 3.5 Management Levels | ✅ Good coverage; no changes needed |
+| Developing Leaders (/management/developing-leaders) | 3.6 Leadership Development, 5.4 Readiness Tool | ✅ Flowchart is excellent visual tool |
+| References (/references) | 7.1-7.4 References & Evidence | ✅ Comprehensive; no changes needed |
+| Contributing (/contributing) | 8.1 Contributing Guide | ✅ Clear GitHub integration; could add case studies later |
 
-- Assessing cultural compatibility
-- Customizing language and examples
-- Reflecting company values in pillars
-- Avoiding cookie-cutter implementation
-- Balancing standardization and flexibility
-- Cultural anti-patterns
+### Identified Gaps
 
----
-
-#### 7.3 Integrating with Existing Systems
-
-**Title**: Career Topologies in Your Tech Stack  
-**Audience**: HR technology, operations  
-**Length**: 6-8 pages  
-**Key Topics**:
-
-- HRIS integration
-- Performance management tools
-- Compensation systems
-- Learning management systems
-- Onboarding platforms
-- Data and reporting
-- API and export needs
-
----
-
-### Section 8: Measurement and Evolution
-
-#### 8.1 Success Metrics
-
-**Title**: Measuring Career Topologies Impact  
-**Description**: Defining and tracking key metrics to assess framework effectiveness.  
-**Audience**: HR, leadership, analytics  
-**Length**: 6-8 pages  
-**Key Topics**:
-
-- Framework adoption metrics
-- Employee satisfaction and understanding
-- Promotion rate and consistency
-- Turnover and retention
-- Diversity and equity indicators
-- Manager confidence
-- Time-to-promotion
-- Survey questions and benchmarks
+| Gap | Priority | Proposed Solution |
+|-----|----------|-------------------|
+| **No dedicated "Getting Started" guide** | High | Create landing page with role-based pathways |
+| **Use cases not explicitly documented** | Medium | Add "For [Audience]" pages with step-by-step journeys |
+| **No FAQ page** | Medium | Extract common questions from content and GitHub |
+| **No customization guide** | Low | Document how to adapt framework to different orgs |
+| **No case studies/adoption stories** | Low | Add as framework matures and adopters share experiences |
+| **Visual library not aggregated** | Low | Create page consolidating all diagrams/charts |
+| **No roadmap/changelog** | Low | Add versioning and planned enhancements |
 
 ---
 
-#### 8.2 Continuous Improvement
+## Navigation Recommendations
 
-**Title**: Evolving Your Career Framework  
-**Description**: Process for collecting feedback, identifying issues, and versioning the framework.  
-**Audience**: Track owners, HR, governance teams  
-**Length**: 6-8 pages  
-**Key Topics**:
+### Primary Navigation (Top Menu)
+```
+Home | Framework | Use Cases | Implementation | Tools | Community | References
+```
 
-- Annual review cycles
-- Feedback collection methods
-- Prioritizing changes
-- Versioning and documentation
-- Change management
-- Communication of updates
-- Deprecating outdated elements
+**Rationale:** 
+- "Framework" replaces "About" as more action-oriented
+- "Use Cases" highlights role-based guidance
+- "Implementation" consolidates practical adoption steps
+- "Tools" aggregates interactive elements
+- "Community" emphasizes open-source nature
 
----
+### Footer Navigation (Current Structure is Good)
+```
+Framework:               Resources:              Community:
+- Leveling               - References            - Contributing
+- Progression Pillars    - Concepts              - GitHub
+- Guidelines             - Manifesto             - Discussions
+- Topologies             - Shapes                - Issues
+                         - Management
+```
 
-### Section 9: Case Studies and Examples
+**Recommendation:** Keep current footer structure; it's comprehensive and well-organized
 
-#### 9.1 Fictional Case Studies
+### Breadcrumb Navigation (Enhanced)
+Add breadcrumbs showing:
+```
+Home > [Section] > [Page]
+```
+Example: `Home > Framework > Progression Pillars`
 
-**Title**: Career Topologies in Action  
-**Description**: Narrative examples showing how different organizations adapted and used the framework.  
-**Audience**: All audiences, especially those evaluating adoption  
-**Length**: 12-15 pages  
-**Key Topics**:
-
-- Startup case: AgileStartup implements Network Model
-- Growth company case: ScaleUp uses W-Model
-- Enterprise case: BigTech standardizes with Y-Model
-- Nonprofit/Agency adaptations
-- Lessons learned from each
-
----
-
-#### 9.2 Real-World Contributions
-
-**Title**: Community Implementations  
-**Description**: Documented experiences from organizations using Career Topologies (as available).  
-**Audience**: All audiences  
-**Length**: Variable  
-**Key Topics**:
-
-- Organization profiles
-- Implementation stories
-- Customizations and adaptations
-- Challenges and solutions
-- Results and impact
+**Current Status:** Breadcrumbs exist; no changes needed
 
 ---
 
-### Section 10: Reference and Appendices
+## Content Prioritization
 
-#### 10.1 Academic and Industry Research
+### Must-Have (Current State)
+✅ All framework components documented  
+✅ Implementation guidance provided  
+✅ Interactive tools available  
+✅ References for credibility  
+✅ Clear contribution pathways  
 
-**Title**: Bibliography and Further Reading  
-**Description**: Curated list of research, articles, and resources that informed Career Topologies.  
-**Audience**: Researchers, contributors, validators  
-**Length**: 10-15 pages  
-**Key Topics**:
+### Should-Have (Short-term enhancements)
+🟡 Explicit "Getting Started" guide for each audience  
+🟡 FAQ page consolidating common questions  
+🟡 Troubleshooting section for implementation pitfalls  
+🟡 Visual library aggregating diagrams/charts  
 
-- Professional profiles (T-shaped, etc.)
-- Career development research
-- Compensation equity studies
-- Organizational design
-- Management frameworks
-- Laws and principles (Peter Principle, Dunbar's Number, etc.)
-
----
-
-#### 10.2 FAQ
-
-**Title**: Frequently Asked Questions  
-**Description**: Common questions and answers about Career Topologies.  
-**Audience**: All audiences  
-**Length**: 8-12 pages  
-**Key Topics**:
-
-- General questions (What is it? Who made it?)
-- Implementation questions (How long? How much?)
-- Usage questions (What if...? How do I...?)
-- Edge cases and exceptions
-- Troubleshooting
+### Nice-to-Have (Long-term enhancements)
+⚪ Case studies from adopting organizations  
+⚪ Customization guide with adaptation examples  
+⚪ Video tutorials and screencasts  
+⚪ Downloadable worksheets and templates  
+⚪ Roadmap and changelog for framework evolution  
 
 ---
 
-#### 10.3 Contribution Guide
+## Documentation Governance
 
-**Title**: Contributing to Career Topologies  
-**Description**: How to contribute improvements, case studies, translations, and tools to the project.  
-**Audience**: Open-source contributors, community members  
-**Length**: 6-8 pages  
-**Key Topics**:
+### Content Maintenance
+- **Owner:** Project maintainers (GitHub organization)
+- **Update Cadence:** As framework evolves (version-based)
+- **Review Process:** Community feedback via GitHub Issues/Discussions
+- **Quality Standards:** Clear, concise, actionable, evidence-based
 
-- Ways to contribute
-- GitHub workflow
-- Contribution standards
-- Documentation style guide
-- Community guidelines
-- Maintainers and governance
-- Roadmap and priorities
-
----
-
-#### 10.4 Version History and Changelog
-
-**Title**: Career Topologies Releases  
-**Description**: Documented changes, additions, and evolution of the framework over time.  
-**Audience**: All users, especially track owners  
-**Length**: Variable  
-**Key Topics**:
-
-- Version numbers and dates
-- Major changes by version
-- Deprecated features
-- Migration guidance
-- Future roadmap
+### Content Principles
+1. **Clarity:** Avoid jargon; define terms on first use
+2. **Actionability:** Provide concrete steps, not just concepts
+3. **Evidence:** Cite research and industry practices
+4. **Inclusivity:** Support multiple career paths and learning styles
+5. **Visual Support:** Use diagrams, charts, and examples liberally
+6. **Navigability:** Multiple pathways to same content for different users
 
 ---
 
-## Documentation Organization Principles
+## Comparison: Current vs. Proposed Structure
 
-### 1. Audience-First Structure
+| Aspect | Current Structure | Proposed Structure | Assessment |
+|--------|-------------------|-------------------|------------|
+| **Organization** | Topic-based (pages for each concept) | Audience + journey-based | Proposed adds explicit use case guidance |
+| **Entry Points** | Home with framework cards | Home + Getting Started with role pathways | Proposed reduces friction for new users |
+| **Depth** | Comprehensive (14 pages) | Similar depth + explicit journeys | Proposed organizes existing content better |
+| **Tools** | Embedded in concept pages | Aggregated in Tools section | Proposed improves discoverability |
+| **Visuals** | Distributed across pages | Also in Visual Library | Proposed enables quick reference |
+| **Gaps** | No FAQ, Getting Started, Case Studies | Addresses these gaps | Proposed fills identified needs |
 
-Documents clearly indicate intended audience (business, product, technical) so readers can find relevant content quickly.
-
-### 2. Progressive Disclosure
-
-Start broad (overviews, concepts) and get specific (implementation details, templates). Enable users to stop when they have enough information.
-
-### 3. Cross-Referencing
-
-Extensive links between related topics. No isolated content—everything connects to the broader framework.
-
-### 4. Practical and Actionable
-
-Every conceptual topic includes "how to apply" guidance. Every process includes templates or examples.
-
-### 5. Versioned and Evolving
-
-Documentation acknowledges it will evolve. Includes version history and contribution pathways.
-
-### 6. Multi-Format
-
-- **Narrative**: Explanatory text
-- **Reference**: Tables, matrices, glossaries
-- **Visual**: Diagrams, flowcharts, infographics
-- **Interactive**: When applicable (tools, calculators)
-- **Templates**: Ready-to-use starting points
+**Recommendation:** Current structure is **strong foundation**; proposed enhancements would improve usability for specific audiences without requiring major restructuring.
 
 ---
 
-## Documentation Audience Matrix
+## Implementation Roadmap (For Documentation)
 
-| Document Section       | Business Leaders | HR / People Ops | Managers | ICs | Track Owners | Contributors |
-| ---------------------- | ---------------- | --------------- | -------- | --- | ------------ | ------------ |
-| Product Overview       | ★★★              | ★★★             | ★★       | ★   | ★★           | ★            |
-| Core Concepts          | ★★               | ★★★             | ★★★      | ★★★ | ★★★          | ★★★          |
-| User Journeys          | ★                | ★★★             | ★★★      | ★★★ | ★★★          | ★            |
-| Framework Components   | ★                | ★★★             | ★★★      | ★★  | ★★★          | ★★           |
-| Specialized Topics     | ★★               | ★★★             | ★★★      | ★★  | ★★           | ★            |
-| Implementation         | ★★★              | ★★★             | ★        | —   | ★★           | ★            |
-| Organizational Context | ★★★              | ★★★             | ★        | —   | ★★           | ★            |
-| Measurement            | ★★★              | ★★★             | ★        | —   | ★★           | ★            |
-| Case Studies           | ★★★              | ★★★             | ★★       | ★★  | ★★           | ★★           |
-| Reference              | ★                | ★★              | ★        | ★   | ★★           | ★★★          |
+### Phase 1: Quick Wins (1-2 weeks)
+1. Add "Getting Started" guide on Home page
+2. Create FAQ page from common GitHub questions
+3. Add troubleshooting section to Guidelines page
 
-**Legend**: ★★★ Primary audience | ★★ Secondary audience | ★ Tertiary audience | — Not applicable
+### Phase 2: Audience Enhancements (1 month)
+1. Create "Use Cases" section with 4 role-based pages
+2. Add Visual Library page aggregating diagrams
+3. Enhance navigation with use case pathways
+
+### Phase 3: Community Growth (Ongoing)
+1. Collect adoption stories and create case studies
+2. Add customization guide with examples
+3. Create video tutorials for key concepts
+4. Develop downloadable worksheets
 
 ---
 
-## Summary
+## Conclusion
 
-This documentation structure proposal organizes Career Topologies content around **user needs and purposes** rather than technical architecture. It serves eight distinct audience types with appropriate depth and focus:
+The current Career Topologies documentation is **comprehensive and well-structured**, covering all framework components with visual tools and implementation guidance. The proposed structure builds on this foundation by:
 
-1. **Business Leaders**: Strategic context, ROI, organizational fit
-2. **HR/People Ops**: Implementation, governance, operations
-3. **Managers**: Application, feedback, evaluation
-4. **Individual Contributors**: Understanding, self-assessment, growth
-5. **Track Owners**: Definition, maintenance, evolution
-6. **Compensation Teams**: Alignment, equity, compliance
-7. **Learning & Development**: Training, enablement, resources
-8. **Contributors**: Participation, improvement, expansion
+1. **Adding explicit user journeys** for different audiences
+2. **Consolidating practical tools** for easier discovery
+3. **Filling gaps** (FAQ, Getting Started, Case Studies)
+4. **Enhancing navigation** with audience-centric pathways
 
-The structure balances **conceptual understanding** (what and why) with **practical application** (how), providing pathways for different learning styles and use cases while maintaining coherence and navigability.
+**Priority Recommendation:** Add "Getting Started" guide and FAQ as quick wins to improve user onboarding while maintaining the strong existing structure.
+
+---
+
+**Document Purpose:** Propose content-focused documentation organization aligned to user needs  
+**Status:** Complete  
+**Next Steps:** Review with project maintainers for implementation prioritization

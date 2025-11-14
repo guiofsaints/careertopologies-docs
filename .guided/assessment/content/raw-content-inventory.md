@@ -1,375 +1,342 @@
 # Raw Content Inventory
 
-## Overview
+## Content Sources Overview
 
-This document catalogs all content sources discovered in the Career Topologies codebase, organized by type and purpose.
+This document lists all discovered content sources in the Career Topologies codebase, organized by type and purpose.
 
 ---
 
-## Content Source Categories
+## 1. Pages (Routes)
 
-### 1. Pages and Routes
-
-#### Home Page (`/`)
-
-- **Path**: `src/App.tsx` (route: `/`)
+### Home Page (`/`)
 - **Type**: Landing page
-- **Components**: HeroSection, AudienceSection, FrameworkSection
-- **Description**: Main entry point showcasing the framework overview, target audience, and navigation to key sections
+- **Path**: `src/App.tsx`
+- **Sections**: HeroSection, AudienceSection, FrameworkSection
+- **Description**: Main entry point showcasing the framework and its purpose
 
-#### About Page (`/about`)
-
+### About Page (`/about`)
+- **Type**: Information page
 - **Path**: `src/components/pages/AboutPage.tsx`
-- **Type**: Informational page
-- **Description**: Comprehensive overview of Career Topologies, its purpose, differentiators, core components, governance, management model, professional shapes, and topology models
+- **Description**: Comprehensive overview of Career Topologies framework, its purpose, components, and structure
 
-#### Framework Page (`/framework`)
-
+### Framework Overview Page (`/framework`)
+- **Type**: Framework documentation
 - **Path**: `src/components/pages/FrameworkPage.tsx`
-- **Type**: Strategic guide page
-- **Description**: Detailed explanation of the framework's core structure (Leveling, Progression Pillars, Topologies, Governance), lifecycle, and implementation considerations
+- **Description**: Core structure, governance, lifecycle, and critical considerations for implementing the framework
 
-#### Framework Sub-pages
+### Framework - Leveling Page (`/framework/leveling`)
+- **Type**: Framework subsection
+- **Path**: `src/components/pages/LevelingPage.tsx`
+- **Description**: Career level definitions with interactive tables, matrices, and topology alignment diagrams
+- **Visual Components**: InteractiveLevelingTable, ImpactAutonomyMatrix, TopologyAlignmentDiagram
 
-- **Leveling** (`/framework/leveling`)
+### Framework - Progression Pillars Page (`/framework/progression`)
+- **Type**: Framework subsection
+- **Path**: `src/components/pages/ProgressionPillarsPage.tsx`
+- **Description**: Core competencies and skills framework with visual proficiency charts
+- **Visual Components**: ProficiencyRadarChart, LevelExamplesCards, ProgressionMatrix
 
-  - Path: `src/components/pages/LevelingPage.tsx`
-  - Description: Interactive exploration of career levels, impact/autonomy matrix, and alignment with topologies
+### Framework - Guidelines Page (`/framework/guidelines`)
+- **Type**: Framework subsection
+- **Path**: `src/components/pages/GuidelinesPage.tsx`
+- **Description**: Practical implementation guide with workflows, responsibilities, and timelines
+- **Visual Components**: FrameworkFlowDiagram, RolesMatrix, ImplementationTimeline
 
-- **Progression Pillars** (`/framework/progression`)
-
-  - Path: `src/components/pages/ProgressionPillarsPage.tsx`
-  - Description: Detailed breakdown of competency pillars with radar charts, progression matrices, and level examples
-
-- **Guidelines** (`/framework/guidelines`)
-  - Path: `src/components/pages/GuidelinesPage.tsx`
-  - Description: Operational guide for implementing the framework with roles, timelines, and communication strategies
-
-#### Concepts Page (`/concepts`)
-
-- **Path**: `src/components/pages/ConceptsPage.tsx`
-- **Type**: Educational reference
-- **Description**: Definitions and explanations of 7 core concepts including topology, leveling, pillars, shapes, ladder roles, governance, and evolution
-
-#### Manifesto Page (`/manifesto`)
-
-- **Path**: `src/components/pages/ManifestoPage.tsx`
-- **Type**: Values and principles
-- **Description**: The 8 foundational principles guiding fair and transparent career development
-
-#### Topologies Page (`/topologies`)
-
-- **Path**: `src/components/pages/TopologiesPage.tsx`
-- **Type**: Model comparison
-- **Description**: Detailed explanation of Y-Model, W-Model, and Network Model career structures with diagrams and comparative analysis
-
-#### Shapes Page (`/shapes`)
-
-- **Path**: `src/components/pages/ShapesPage.tsx`
-- **Type**: Skill profile reference
-- **Description**: Explanation of I-Shaped, T-Shaped, and Pi-Shaped professional profiles
-
-#### Management Page (`/management`)
-
+### Management Page (`/management`)
+- **Type**: Specialized topic
 - **Path**: `src/components/pages/ManagementPage.tsx`
-- **Type**: Leadership framework
-- **Description**: Three-layer management model (Front-line, Middle, Top) with responsibilities and knowledge requirements
+- **Description**: Three layers of management (Front-line, Middle, Top) with shared responsibilities
 
-#### Management Sub-page
+### Management - Developing Leaders Page (`/management/developing-leaders`)
+- **Type**: Specialized guide
+- **Path**: `src/components/pages/DevelopingLeadersPage.tsx`
+- **Description**: Process for identifying and developing new leaders
+- **Visual Components**: LeadershipReadinessFlowchart
 
-- **Developing Leaders** (`/management/developing-leaders`)
-  - Path: `src/components/pages/DevelopingLeadersPage.tsx`
-  - Description: Process guide for identifying, preparing, and evaluating first-time leaders
+### Topologies Page (`/topologies`)
+- **Type**: Concept documentation
+- **Path**: `src/components/pages/TopologiesPage.tsx`
+- **Description**: Y-Model, W-Model, and Network Model career structures with diagrams
+- **Visual Components**: Topology diagrams with comparative summary table
 
-#### Contributing Page (`/contributing`)
+### Concepts Page (`/concepts`)
+- **Type**: Concept documentation
+- **Path**: `src/components/pages/ConceptsPage.tsx`
+- **Description**: Core concepts of Career Topologies including topology, leveling, pillars, shapes, roles, governance
 
-- **Path**: `src/components/pages/ContributingPage.tsx`
-- **Type**: Community engagement
-- **Description**: How to contribute to the project via GitHub, ways to help, maintainer information
+### Manifesto Page (`/manifesto`)
+- **Type**: Principles documentation
+- **Path**: `src/components/pages/ManifestoPage.tsx`
+- **Description**: The 8 fundamental principles for fair career development
 
-#### References Page (`/references`)
+### Shapes Page (`/shapes`)
+- **Type**: Concept documentation
+- **Path**: `src/components/pages/ShapesPage.tsx`
+- **Description**: I-Shaped, T-Shaped, and Pi-Shaped professional skill profiles
 
+### References Page (`/references`)
+- **Type**: Resource documentation
 - **Path**: `src/components/pages/ReferencesPage.tsx`
-- **Type**: Bibliography
-- **Description**: Academic and professional resources organized by category (Professional Profile, News, Structures, Studies, Leadership)
+- **Description**: Academic and professional references with external links organized by category
+
+### Contributing Page (`/contributing`)
+- **Type**: Community resource
+- **Path**: `src/components/pages/ContributingPage.tsx`
+- **Description**: How to contribute to the project, with GitHub repository information and contribution guidelines
 
 ---
 
-### 2. Navigation Components
+## 2. Layout Components
 
-#### Main Navigation
+### Navigation
+- **Path**: Navigation component (referenced in App.tsx)
+- **Description**: Main navigation menu
+- **Links**: Defined in `src/components/config/NavigationConstants.ts`
 
-- **Path**: `src/components/layout/Navigation.tsx`
-- **Type**: Site navigation
-- **Links**: About, Framework, Concepts, Manifesto, Contributing
-
-#### Footer Navigation
-
-- **Path**: `src/components/layout/Footer.tsx`
-- **Type**: Secondary navigation
-- **Links**: Topologies, Shapes, Management, References
-
-#### Navigation Constants
-
-- **Path**: `src/components/config/NavigationConstants.ts`
-- **Type**: Configuration
-- **Content**: Centralized navigation link definitions
-
-#### Breadcrumb Navigation
-
+### BreadcrumbNavigation
 - **Path**: `src/components/layout/BreadcrumbNavigation.tsx`
-- **Type**: Contextual navigation
-- **Description**: Dynamic breadcrumb trails for sub-pages
+- **Description**: Breadcrumb navigation with hierarchical page paths
+- **Configuration**: Breadcrumb paths for all pages including parent relationships
+
+### Footer
+- **Path**: `src/components/layout/Footer.tsx`
+- **Description**: Comprehensive footer with project description, navigation sections, social media links, and copyright information
+- **Sections**:
+  - About Career Topologies
+  - Framework navigation
+  - Resources navigation
+  - Community links
+  - Social media icons
+  - GitHub integration
+  - Copyright and attribution
 
 ---
 
-### 3. Section Components
+## 3. Section Components
 
-#### Hero Section
-
+### HeroSection
 - **Path**: `src/components/sections/HeroSection.tsx`
-- **Type**: Homepage hero
-- **Key Content**:
-  - Title: "Career Topologies"
-  - Tagline: "A strategic framework for building fair, transparent, and sustainable career paths in technology organizations"
-  - Description of Y-shaped, W-shaped, N-shaped patterns
+- **Used on**: Home page
+- **Content**:
+  - Main title: "Career Topologies"
+  - Tagline: "A strategic framework for building fair, transparent, and sustainable career paths in technology organizations."
+  - Description of Y-shaped, W-shaped, and N-shaped topology patterns
+  - Version badge: v1.0.0
+- **Visual**: Career topologies diagram image
 
-#### Audience Section
-
+### AudienceSection
 - **Path**: `src/components/sections/AudienceSection.tsx`
-- **Type**: Target audience
-- **Key Content**: "Who is this for?"
+- **Used on**: Home page
+- **Content**: "Who is this for?" with target audiences:
   - HR professionals and People teams
   - Engineering managers and team leaders
   - Individual contributors planning growth
   - Organizations designing structured paths
 
-#### Framework Section
-
+### FrameworkSection
 - **Path**: `src/components/sections/FrameworkSection.tsx`
-- **Type**: Navigation cards
-- **Key Content**: "Explore the Framework" with 6 main areas
+- **Used on**: Home page
+- **Content**: "Explore the Framework" grid with navigation cards:
+  - Framework overview
+  - Manifesto
+  - Concepts
+  - Topologies
+  - Management
+  - Contributing
+
+### LeadershipReadinessFlowchart
+- **Path**: `src/components/sections/LeadershipReadinessFlowchart.tsx`
+- **Used on**: Developing Leaders page
+- **Visual Component**: Interactive flowchart with 4 steps and 3 outcomes
+- **Steps**:
+  1. Knowledge & Contribution Analysis
+  2. Development Plan
+  3. Interim Experience (3-6 months)
+  4. Evaluation
+- **Outcomes**: Promotion, Further Development, No Longer Interested
+
+### UnifiedRelatedPages
+- **Path**: `src/components/sections/UnifiedRelatedPages.tsx`
+- **Configuration**: `src/components/sections/UnifiedRelatedPagesConfig.ts`
+- **Used on**: Most pages
+- **Content**: Context-aware related pages suggestions organized by categories
+- **Variants**: explore, learn, related
+
+### PageHero
+- **Path**: Referenced across all pages
+- **Description**: Page header component with title and description
+
+---
+
+## 4. Constants and Configuration Files
+
+### NavigationConstants.ts
+- **Path**: `src/components/config/NavigationConstants.ts`
+- **Content**:
+  - **navigationLinks**: About, Framework, Concepts, Manifesto, Contributing
+  - **footerLinks**: Topologies, Shapes, Management, References
+
+### constants.ts
+- **Path**: `src/lib/constants.ts`
+- **Content**:
+  - **APP_CONFIG**: name, description, version, author, repository URL
+  - **NAVIGATION_ITEMS**: Complete navigation menu items with labels and hrefs
+  - **THEME_CONFIG**: Default theme and storage key
+  - **LANGUAGE_CONFIG**: Supported languages (English, Portuguese, Spanish, French) with flags
+
+### UnifiedRelatedPagesConfig.ts
+- **Path**: `src/components/sections/UnifiedRelatedPagesConfig.ts`
+- **Content**: 
+  - Predefined page collections (FRAMEWORK_PAGES, CONCEPT_PAGES, RESOURCE_PAGES, SPECIALIZED_PAGES)
+  - Page-specific configurations for intelligent related page suggestions
+  - Smart function to get related pages with fallback logic
+
+---
+
+## 5. Key User-Facing Text Groupings
+
+### Headings and Section Titles
+- "Career Topologies" (Main title)
+- "Purpose", "What Makes It Different?", "Core Components"
+- "Governance & Roles", "Management Model", "Professional Shapes"
+- "Career Topologies", "Ongoing Development"
+- "Core Structure", "Implementation Lifecycle", "Critical Considerations"
+- "Topology Models", "Comparative Summary", "Choosing a Topology"
+- "The 8 Principles", "Professional Shapes", "Growth and Transitions"
+- "Leveling Objectives", "Typical Levels", "Impact × Autonomy Matrix"
+- "Pillar Objectives", "Pillar Structure", "Examples by Level"
+- "How to Use the Framework", "Communication Best Practices", "Promotion Process Guide"
+- "Leadership Readiness Flowchart", "Why It Matters", "Best Practices"
+
+### Call-to-Action Labels
+- "Explore Leveling", "View Pillars", "Learn Topologies", "Implementation Guide"
+- "Contribute on GitHub", "Visit Repository", "Find Good First Issues"
+- "View Detailed Guide"
+
+### Helper Text and Descriptions
+- Pillar descriptions for competency areas
+- Level expectation descriptions
+- Topology use case descriptions
+- Management responsibility descriptions
+
+### Status and Validation Messages
+- None identified (no forms or interactive validation in visible content)
+
+### Empty States
+- None identified
+
+### Table Headers
+- Comparative summary tables: Aspect, Y-Model, W-Model, Network Model
+- Roles matrix: HR, Team Leads, Managers, Employees
+- Progression matrix: Pillar names and level indicators
+
+### Filter Labels
+- Level selector buttons: Junior, Mid-level, Senior, Staff, Principal, Distinguished
+
+---
+
+## 6. Visual Components
+
+### Charts and Diagrams
+
+#### Interactive Leveling Table
+- **Location**: LevelingPage
+- **Represents**: Career levels from Junior to Director/VP/C-Level
+- **Dimensions**: Level, Impact Scope, Autonomy, Complexity
+- **Interactive**: Click to expand details
+
+#### Impact × Autonomy Matrix
+- **Location**: LevelingPage
+- **Represents**: Relationship between scope of impact and degree of autonomy
+- **Axes**: Scope of Impact (x), Autonomy (y)
+- **Data Points**: 6 levels plotted on a 2D grid
+
+#### Proficiency Radar Chart
+- **Location**: ProgressionPillarsPage
+- **Represents**: Skill proficiency across 6 pillars
+- **Dimensions**: Delivery & Execution, Technical Domain, Collaboration, Autonomy, Initiative, Mentoring
+- **Interactive**: Level selector (Junior through Distinguished)
+- **Metrics**: 1-5 scale for each pillar
+
+#### Progression Matrix
+- **Location**: ProgressionPillarsPage
+- **Represents**: Competency levels across career levels
+- **Format**: Heat map with color intensity representing proficiency (1-5 scale)
+- **Rows**: Career levels (Junior through Principal)
+- **Columns**: 6 progression pillars
+
+#### Topology Alignment Diagrams
+- **Location**: LevelingPage
+- **Represents**: How career levels align with Y, W, and Network topology models
+- **Format**: 3 side-by-side diagrams showing level-to-path mappings
+
+#### Topology Model Diagrams
+- **Location**: TopologiesPage
+- **Represents**: Y-Model, W-Model, Network Model career structures
+- **Visual**: SVG/image placeholders showing career path bifurcations and connections
 
 #### Leadership Readiness Flowchart
+- **Location**: DevelopingLeadersPage
+- **Represents**: 4-step process for developing new leaders with 3 possible outcomes
+- **Interactive**: Hover tooltips with step details
+- **Format**: Desktop (horizontal flow) and Mobile (vertical flow) responsive layouts
 
-- **Path**: `src/components/sections/LeadershipReadinessFlowchart.tsx`
-- **Type**: Process diagram
-- **Description**: Visual flowchart for leader development process
+#### Framework Flow Diagram
+- **Location**: GuidelinesPage
+- **Represents**: Implementation flow from Topology → Ladder → Levels → Pillars
+- **Format**: 4-step sequential diagram with icons
 
-#### Unified Related Pages
+#### Roles and Responsibilities Matrix
+- **Location**: GuidelinesPage
+- **Represents**: Responsibility levels (Primary, Secondary, Support, None) across HR, Team Leads, Managers, Employees
+- **Dimensions**: 4 roles × 6 responsibilities
 
-- **Path**: `src/components/sections/UnifiedRelatedPages.tsx`
-- **Type**: Cross-linking component
-- **Description**: Context-aware related page suggestions
+#### Implementation Timeline
+- **Location**: GuidelinesPage
+- **Represents**: 8-phase implementation roadmap spanning 24 weeks
+- **Format**: Gantt-style timeline showing phase durations and overlaps
 
----
-
-### 4. Common Components
-
-#### Empty State
-
-- **Path**: `src/components/common/EmptyState.tsx`
-- **Type**: UI feedback
-- **Messages**: Placeholder for empty data states
-
-#### Loading Spinner
-
-- **Path**: `src/components/common/LoadingSpinner.tsx`
-- **Type**: UI feedback
-- **Messages**: Loading indicators
-
-#### Feature Card
-
-- **Path**: `src/components/common/FeatureCard.tsx`
-- **Type**: Content presentation
-- **Description**: Reusable card component for features/benefits
+### Widgets and KPIs
+- Version badge: v1.0.0 (HeroSection)
+- Social media icon links (Footer)
 
 ---
 
-### 5. Media Components
+## 7. Links and References
 
-#### Page Hero
+### Internal Navigation Links
+All pages include:
+- Main navigation menu links
+- Breadcrumb navigation
+- Footer navigation sections
+- Related pages cards
+- In-content contextual links
 
-- **Path**: `src/components/media/PageHero.tsx`
-- **Type**: Page header
-- **Description**: Standardized page title and description component used across all major pages
+Documented separately in `links-and-references.md`.
 
-#### Image with Fallback
-
-- **Path**: `src/components/media/ImageWithFallback.tsx`
-- **Type**: Media handler
-- **Description**: Image component with error handling
-
----
-
-### 6. Configuration Files
-
-#### README.md
-
-- **Path**: `README.md`
-- **Type**: Project documentation
-- **Content**:
-  - Project description
-  - Tech stack information
-  - Installation and setup instructions
-  - Project structure overview
-
-#### Package.json
-
-- **Path**: `package.json`
-- **Type**: Project metadata
-- **Content**:
-  - Project name: "careertopologies"
-  - Version: "0.0.0"
-  - Dependencies and scripts
+### External URLs
+Documented separately in `links-and-references.md`.
 
 ---
 
-## User-Facing Text Categories
+## Summary Statistics
 
-### 1. Headings and Titles
-
-**Primary Page Titles:**
-
-- "Career Topologies"
-- "About Career Topologies"
-- "Career Topologies Framework"
-- "Core Concepts"
-- "Career Manifesto"
-- "Career Topologies – Leveling"
-- "Career Topologies – Progression Pillars"
-- "Guidelines"
-- "Professional Shapes (Skill Profiles)"
-- "Management Levels"
-- "Developing New Leaders"
-- "Contributing"
-- "References"
-
-**Section Headings (Examples):**
-
-- "Purpose"
-- "What Makes It Different?"
-- "Core Components"
-- "Governance & Roles"
-- "Management Model"
-- "Professional Shapes"
-- "Career Topologies"
-- "Ongoing Development"
-- "The 8 Principles"
-- "Who is this for?"
-- "Explore the Framework"
-
-### 2. Calls-to-Action (CTAs)
-
-- "Explore Leveling"
-- "View Pillars"
-- "Learn Topologies"
-- "Implementation Guide"
-- "Contribute on GitHub"
-- "Visit Repository"
-- "View Detailed Guide"
-- "Find Good First Issues"
-
-### 3. Descriptive Text
-
-**Value Propositions:**
-
-- "A strategic framework for building fair, transparent, and sustainable career paths in technology organizations"
-- "Empowering individuals and organizations by offering a shared language and strategy for career development"
-- "Building career systems that are clear, inclusive, and aligned with business needs"
-
-**Key Principles:**
-
-- "Transparency in expectations and opportunities"
-- "Merit-based growth without favoritism"
-- "Equity in compensation and recognition"
-- "Consistency in evaluations and promotions"
-- "Collaboration over competition"
-- "Diversity and inclusion across all levels"
-- "Shared ownership of career development"
-- "Flexibility to grow through different paths"
-
-### 4. Navigation Labels
-
-**Primary Navigation:**
-
-- "About"
-- "Framework"
-- "Concepts"
-- "Manifesto"
-- "Contributing"
-
-**Footer Navigation:**
-
-- "Topologies"
-- "Shapes"
-- "Management"
-- "References"
-
-### 5. Form Labels and Helper Text
-
-No forms present in the current implementation. The site is informational/documentation-focused.
-
-### 6. Empty States and Messages
-
-- "Loading..." (implied from LoadingSpinner component)
-- Empty state messages handled by EmptyState component
-
-### 7. Tooltips and Hints
-
-**Implicit guidance text throughout content:**
-
-- Level progression explanations
-- Pillar descriptions
-- Topology selection considerations
-- Best practices and recommendations
+- **Total Pages**: 14 (1 home + 13 content pages)
+- **Layout Components**: 3 (Navigation, BreadcrumbNavigation, Footer)
+- **Section Components**: 6 (HeroSection, AudienceSection, FrameworkSection, LeadershipReadinessFlowchart, UnifiedRelatedPages, PageHero)
+- **Visual Components**: 10 interactive charts/diagrams
+- **Configuration Files**: 3 (NavigationConstants, constants, UnifiedRelatedPagesConfig)
+- **Total Content Sources**: ~36 unique files analyzed
 
 ---
 
-## Content Organization Patterns
+## Notes
 
-### 1. Hierarchical Structure
-
-- Main concepts → Sub-concepts → Details → Examples
-- Framework → Components → Guidelines → Implementation
-
-### 2. Progressive Disclosure
-
-- Overview pages with links to detailed pages
-- Interactive components (collapsible sections, tabs)
-- Visual diagrams with explanatory text
-
-### 3. Cross-Referencing
-
-- Related pages component on most pages
-- Inline links to related concepts
-- Breadcrumb navigation for context
-
-### 4. Multi-Format Content
-
-- Text explanations
-- Lists and tables
-- Visual diagrams (SVG placeholders)
-- Interactive components (radar charts, matrices)
-
----
-
-## Content Metadata
-
-**Language:** English (US)  
-**Tone:** Professional, educational, inclusive  
-**Style:** Clear, structured, actionable  
-**Audience Level:** Professional/Technical (HR, Engineering, Leadership)  
-**Content Purpose:** Education, guidance, implementation support  
-**Version Indicated:** v1.0.0
-
----
-
-## File Count Summary
-
-- **Pages**: 14 (including sub-pages)
-- **Section Components**: 5
-- **Layout Components**: 4
-- **Common Components**: 3
-- **Configuration Files**: 2
-- **Total Content Sources**: ~28 primary files
+- All pages use consistent component structure with PageHero, content sections, and UnifiedRelatedPages
+- Visual components are primarily implemented as React components with SVG/Canvas rendering
+- No i18n files detected (though LANGUAGE_CONFIG suggests multilingual support is planned)
+- No external CMS or JSON data files found
+- Images are placeholder SVG files referenced from `/placeholder-*.svg` paths
+- All content is hardcoded in TypeScript/TSX files
+- Framework uses Radix UI for design primitives
+- Lucide React for icons throughout the application
